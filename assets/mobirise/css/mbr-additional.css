@@ -1633,60 +1633,56 @@ body {
 .cid-qC1KYoZzbF .mbr-text P {
   color: #ffffff;
 }
-.cid-qC7C7xM2EW {
-  padding-top: 120px;
-  padding-bottom: 0px;
-  background-color: #ffffff;
+.cid-qCGjqG6aZh {
+  padding-top: 90px;
+  padding-bottom: 90px;
+  background-color: #f9f9f9;
 }
-.cid-qC7C7xM2EW H2 {
+.cid-qCGjqG6aZh h3 {
+  font-weight: 300;
+}
+.cid-qCGjqG6aZh .card-img {
+  width: initial;
+}
+.cid-qCGjqG6aZh .card-img .mbr-iconfont {
+  font-size: 48px;
+  padding-right: 1rem;
+}
+.cid-qCGjqG6aZh .media-container-row {
+  word-wrap: break-word;
+  padding-bottom: 2rem;
+  height: 100%;
+}
+.cid-qCGjqG6aZh .media {
+  margin: initial;
+  align-items: center;
+}
+.cid-qCGjqG6aZh .mbr-section-subtitle {
   color: #0f7699;
 }
-.cid-qC7CrFpY87 {
-  padding-top: 0px;
-  padding-bottom: 120px;
-  background: #ffffff;
+.cid-qCGjqG6aZh .mbr-text {
+  color: #0f7699;
 }
-.cid-qC7CrFpY87 .image-block {
-  margin: auto;
+.cid-qCGjqG6aZh .media-container-column {
+  display: -webkit-flex;
+  flex-direction: column;
+  -webkit-flex-direction: column;
 }
-.cid-qC7CrFpY87 .mbr-figure {
-  margin: 0 auto;
+.cid-qCGjqG6aZh .mbr-section-title B {
+  color: #0f7699;
 }
-.cid-qC7CrFpY87 figcaption {
-  position: relative;
+.cid-qCGjqG6aZh .card-title,
+.cid-qCGjqG6aZh .card-img {
+  color: #0f7699;
+  text-align: left;
 }
-.cid-qC7CrFpY87 figcaption div {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
-@media (max-width: 768px) {
-  .cid-qC7CrFpY87 .image-block {
-    width: 100% !important;
-  }
-}
-.cid-qC7BoC1auf {
-  padding-top: 30px;
-  padding-bottom: 30px;
+.cid-qCGnJmySGr {
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-color: #0f7699;
 }
-.cid-qC7BoC1auf .line {
-  background-color: #ffffff;
-  color: #ffffff;
-  align: center;
-  height: 2px;
-  margin: 0 auto;
-}
-.cid-qC7BoC1auf .section-text {
-  padding: 2rem 0;
-}
-.cid-qC7BoC1auf .inner-container {
-  margin: 0 auto;
-}
-@media (max-width: 768px) {
-  .cid-qC7BoC1auf .inner-container {
-    width: 100% !important;
-  }
+.cid-qCGnJmySGr H2 {
+  text-align: center;
 }
 .cid-qC7BnQc80c {
   padding-top: 60px;
