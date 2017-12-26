@@ -1338,7 +1338,7 @@ body {
   min-height: 100vh;
 }
 .cid-qC34l4rkay {
-  background-image: url("../../../assets/images/8-2000x1125.jpg");
+  background-image: url("../../../assets/images/18-2000x1125.jpg");
 }
 .cid-qC34l4rkay .mbr-figure {
   margin: 0 auto;
@@ -1356,7 +1356,10 @@ body {
 }
 .cid-qC34l4rkay .mbr-text,
 .cid-qC34l4rkay .mbr-section-btn {
-  color: #ffffff;
+  color: #0f7699;
+}
+.cid-qC34l4rkay H1 {
+  color: #0f7699;
 }
 .cid-qC1L8f4lN3 {
   padding-top: 135px;
