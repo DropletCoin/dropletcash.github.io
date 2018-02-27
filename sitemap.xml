@@ -30,9 +30,6 @@
 		<loc>https://droplet.cash/Whitepaper.html</loc>
 	</url>
 	<url>
-		<loc>https://droplet.cash/Pay.Droplet.cash.html</loc>
-	</url>
-	<url>
 		<loc>https://droplet.cash/Contribution_Request.html</loc>
 	</url>
 	<url>
@@ -43,5 +40,8 @@
 	</url>
 	<url>
 		<loc>https://droplet.cash/Contact.html</loc>
+	</url>
+	<url>
+		<loc>https://droplet.cash/Pay.html</loc>
 	</url>
 </urlset>
