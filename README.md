@@ -1,2 +1,2 @@
 # dropletcash.github.io
-GitHub Pages
+Dropletcoin.com Website, temporary fix.
