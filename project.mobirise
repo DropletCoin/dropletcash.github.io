@@ -1,7 +1,7 @@
 {
   "settings": {
     "name": "Droplet Site",
-    "currentPage": "Contact.html",
+    "currentPage": "index.html",
     "theme": {
       "name": "mobirise-amp",
       "title": "Mobirise AMP",
@@ -41,7 +41,7 @@
     "google-analytics": "",
     "sitemapSwitcher": "on",
     "versionFirst": "4.6.5",
-    "uniqCompNum": 242,
+    "uniqCompNum": 243,
     "versionPublish": "4.6.5",
     "screenshot": "screenshot.png"
   },
@@ -265,39 +265,13 @@
           "_styles": {
             "padding-top": "(@paddingTop * 15px)",
             "padding-bottom": "(@paddingBottom * 15px)",
-            "background-color": "@bgColor",
-            "h1": {
-              "margin-bottom": "20px"
-            },
-            ".wrapper": {
-              "text-align": "center"
-            },
-            ".amp-iconfont": {
-              "padding": "1rem",
-              "margin": ".5rem",
-              "background": "@iconsBg",
-              "color": "contrast(@iconsBg, darken(@iconsBg, 50%), #ffffff, 60%)",
-              "font-size": "~\"@{iconsSize}rem\""
-            },
-            "B": {
-              "color": "#ffffff"
-            },
-            "#iconer:hover": {
-              "background-color": "#0f7699",
-              "transition": "1s",
-              "border-radius": "500px"
-            },
-            "#iconer": {
-              "transition": "1s"
-            }
+            "background-color": "@bgColor"
           },
-          "_name": "social-follow",
-          "_customHTML": "<section class=\"social-follow\" group=\"Social\" plugins=\"amp-main\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" value=\"3\" step=\"1\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" value=\"3\" step=\"1\">\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\">\n        <input type=\"range\" inline title=\"Icons Count\" name=\"iconsCount\" min=\"1\" max=\"10\" value=\"6\" step=\"1\">\n        <input type=\"range\" inline title=\"Icons Size\" name=\"iconsSize\" min=\"0.8\" max=\"5\" step=\"0.1\" value=\"3.4\">\n        <input type=\"color\" name=\"iconsBg\" title=\"Icons Bg\" value=\"#000000\">\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#000000\">\n    </mbr-parameters>\n\n    <div class=\"wrapper\">\n        <h1 class=\"mbr-fonts-style align-center mbr-light\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\"><b>\n            Community</b></h1>\n        <div class=\"icons-list\" mbr-list mbr-list-grow=\"iconsCount\">\n            <a href=\"https://www.linkedin.com/company/dropletcoin/\" target=\"_blank\">\n                <span id=\"iconer\" mbr-icon class=\"amp-iconfont fa-linkedin fa\"></span>\n            </a>\n            \n            \n            \n            \n            \n            \n        <a href=\"https://www.facebook.com/Dropletcoin.official/\" target=\"_blank\">\n                <span id=\"iconer\" mbr-icon class=\"amp-iconfont fa-facebook-square fa\"></span>\n            </a><a href=\"https://twitter.com/DropletCoin\" target=\"_blank\">\n                <span id=\"iconer\" mbr-icon class=\"amp-iconfont fa-twitter-square fa\"></span>\n            </a><a href=\"https://github.com/DropletCoin\" target=\"_blank\">\n                <span id=\"iconer\" mbr-icon class=\"amp-iconfont fa-github fa\"></span>\n            </a><a href=\"https://www.reddit.com/r/Droplet_coin/\" target=\"_blank\">\n                <span id=\"iconer\" mbr-icon class=\"amp-iconfont fa-reddit-square fa\"></span>\n            </a><a href=\"https://www.youtube.com/channel/UChOF3y11_clZDhjWu_Jibyw\" target=\"_blank\">\n                <span id=\"iconer\" mbr-icon class=\"amp-iconfont fa-youtube fa\"></span>\n            </a></div>\n    </div>\n</section>",
-          "_anchor": "social-follow-2y",
+          "_name": "content5",
+          "_customHTML": "<section class=\"mbr-section content5\" plugins=\"amp-main\" group=\"Article\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n        <input type=\"color\" title=\"Backgroud Color\" name=\"bgColor\" value=\"#000000\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-container\">\n        <div class=\"mbr-section-btn align-center\" mbr-buttons mbr-theme-style=\"display-4\" data-toolbar=\"-mbrBtnMove\"><a class=\"btn btn-black\" href=\"Blog_&_Reports.html\">BLOG<br></a>\n            <a class=\"btn btn-white-outline\" href=\"Announcements_&_Updates.html\"><span class=\"fa fa-bookmark-o mbr-iconfont mbr-iconfont-btn\"></span>UPDATES</a></div>\n    </div>\n</section>",
+          "_anchor": "content5-6q",
           "_isUserblock": true,
-          "_cid": "qKCH3zT8p2",
-          "_PHPplaceholders": [],
-          "_JSplaceholders": [],
+          "_cid": "qLOWOrtzrF",
           "_protectedParams": [],
           "_global": false,
           "_once": false,
@@ -877,6 +851,48 @@
           "_styles": {
             "padding-top": "(@paddingTop * 15px)",
             "padding-bottom": "(@paddingBottom * 15px)",
+            "background-color": "@bgColor",
+            "h1": {
+              "margin-bottom": "20px"
+            },
+            ".wrapper": {
+              "text-align": "center"
+            },
+            ".amp-iconfont": {
+              "padding": "1rem",
+              "margin": ".5rem",
+              "background": "@iconsBg",
+              "color": "contrast(@iconsBg, darken(@iconsBg, 50%), #ffffff, 60%)",
+              "font-size": "~\"@{iconsSize}rem\""
+            },
+            "B": {
+              "color": "#ffffff"
+            },
+            "#iconer:hover": {
+              "background-color": "#0f7699",
+              "transition": "1s",
+              "border-radius": "500px"
+            },
+            "#iconer": {
+              "transition": "1s"
+            }
+          },
+          "_name": "social-follow",
+          "_customHTML": "<section class=\"social-follow\" group=\"Social\" plugins=\"amp-main\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" value=\"3\" step=\"1\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" value=\"3\" step=\"1\">\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\">\n        <input type=\"range\" inline title=\"Icons Count\" name=\"iconsCount\" min=\"1\" max=\"10\" value=\"6\" step=\"1\">\n        <input type=\"range\" inline title=\"Icons Size\" name=\"iconsSize\" min=\"0.8\" max=\"5\" step=\"0.1\" value=\"3.4\">\n        <input type=\"color\" name=\"iconsBg\" title=\"Icons Bg\" value=\"#232323\">\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#232323\">\n    </mbr-parameters>\n\n    <div class=\"wrapper\">\n        <h1 class=\"mbr-fonts-style align-center mbr-light\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\"><b>\n            Community</b></h1>\n        <div class=\"icons-list\" mbr-list mbr-list-grow=\"iconsCount\">\n            <a href=\"https://www.linkedin.com/company/dropletcoin/\" target=\"_blank\">\n                <span id=\"iconer\" mbr-icon class=\"amp-iconfont fa-linkedin fa\"></span>\n            </a>\n            \n            \n            \n            \n            \n            \n        <a href=\"https://www.facebook.com/Dropletcoin.official/\" target=\"_blank\">\n                <span id=\"iconer\" mbr-icon class=\"amp-iconfont fa-facebook-square fa\"></span>\n            </a><a href=\"https://twitter.com/DropletCoin\" target=\"_blank\">\n                <span id=\"iconer\" mbr-icon class=\"amp-iconfont fa-twitter-square fa\"></span>\n            </a><a href=\"https://github.com/DropletCoin\" target=\"_blank\">\n                <span id=\"iconer\" mbr-icon class=\"amp-iconfont fa-github fa\"></span>\n            </a><a href=\"https://www.reddit.com/r/Droplet_coin/\" target=\"_blank\">\n                <span id=\"iconer\" mbr-icon class=\"amp-iconfont fa-reddit-square fa\"></span>\n            </a><a href=\"https://www.youtube.com/channel/UChOF3y11_clZDhjWu_Jibyw\" target=\"_blank\">\n                <span id=\"iconer\" mbr-icon class=\"amp-iconfont fa-youtube fa\"></span>\n            </a></div>\n    </div>\n</section>",
+          "_anchor": "social-follow-2y",
+          "_isUserblock": true,
+          "_cid": "qKCH3zT8p2",
+          "_PHPplaceholders": [],
+          "_JSplaceholders": [],
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
             "& when (@bg-type = 'image')": {
               "background-image": "url(@bg-value)"
             },
@@ -907,7 +923,7 @@
             }
           },
           "_name": "footer3",
-          "_customHTML": "<section class=\"footer3\" group=\"Footers\" plugins=\"amp-main\" global once=\"footer\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"3\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"3\">\n\n        <select title=\"Columns\" name=\"columnsCount\">\n            <option value=\"1\">1</option>\n            <option value=\"2\">2</option>\n            <option value=\"3\" selected>3</option>\n        </select>\n\n        <input type=\"checkbox\" title=\"Show Column Title\" name=\"showTitle\" checked>\n        <input type=\"range\" inline title=\"Column 1 Items\" name=\"columnItems1\" min=\"1\" max=\"6\" value=\"3\">\n        <input type=\"range\" inline title=\"Column 2 Items\" name=\"columnItems2\" min=\"1\" max=\"6\" value=\"3\" condition=\"columnsCount > 1\">\n        <input type=\"range\" inline title=\"Column 3 Items\" name=\"columnItems3\" min=\"1\" max=\"6\" value=\"3\" condition=\"columnsCount > 2\">\n\n        <fieldset type=\"background\" name=\"bg\">\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background4.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#232323\" selected>\n        </fieldset>\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"container\">\n        <div class=\"mbr-row mbr-justify-content-center\">\n            <div id=\"bildedpt\" class=\"image-block mbr-col-sm-12 mbr-col-md-3\">\n                <amp-img src=\"@PROJECT_PATH@/assets/images/droplet-seddelen-hvit-bg-2957x1340.png\" layout=\"responsive\" width=\"255.97910447761194\" height=\"116\" alt=\"Mobirise\">\n                    <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/droplet-seddelen-hvit-bg-2957x1340.png\" alt=\"Mobirise\" title>\n                </amp-img>\n            </div>\n\n            <div class=\"items-col mbr-col-sm-12 align-right\" mbr-class=\"{'mbr-col-md-3': columnsCount == 3,\n                             'mbr-col-md-4': columnsCount <= 2}\">\n                <h3 class=\"mbr-fonts-style group-title mbr-bold\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".group-title\">About</h3>\n                <div class=\"items\" mbr-list mbr-list-grow=\"columnItems1\">\n                    <p class=\"item mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".item, .items\"><a href=\"Blog_&_Reports.html\" class=\"text-white\">Blog</a></p>\n                    <p class=\"item mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".item, .items\"><a href=\"https://www.reddit.com/r/Droplet_coin/\" target=\"_blank\" class=\"text-white\">Community</a></p>\n                    <p class=\"item mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".item, .items\">\n                        <a href=\"Announcements_&_Updates.html\" class=\"text-white\">Announcements</a></p>\n                </div>\n            </div>\n\n            <div class=\"items-col mbr-col-sm-12 align-right\" mbr-class=\"{'mbr-col-md-3': columnsCount == 3,\n                             'mbr-col-md-4': columnsCount <= 2}\" mbr-if=\"columnsCount > 1\">\n                <h3 class=\"mbr-fonts-style group-title mbr-bold\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".group-title\">\n                    Overview</h3>\n                <div class=\"items\" mbr-list mbr-list-grow=\"columnItems2\">\n                    <p class=\"item mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".item, .items\">\n                        <a href=\"Features.html\" class=\"text-white\">Technologies</a></p>\n                    <p class=\"item mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".item, .items\">\n                        <a href=\"Roadmap.html\" class=\"text-white\">Roadmap</a></p>\n                    <p class=\"item mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".item, .items\">\n                        <a href=\"Team.html\" class=\"text-white\">Team</a></p>\n                </div>\n            </div>\n\n            <div id=\"featuresid\" class=\"items-col mbr-col-sm-12 align-right\" mbr-class=\"{'mbr-col-md-3': columnsCount == 3,\n                             'mbr-col-md-4': columnsCount <= 2}\" mbr-if=\"columnsCount > 2\">\n                <h3 class=\"mbr-fonts-style group-title mbr-bold\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".group-title\">\n                    Features</h3>\n                <div class=\"items\" mbr-list mbr-list-grow=\"columnItems3\">\n                    <p class=\"item mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".item, .items\">\n                        <a href=\"zk-snarks.html\" class=\"text-white\">Zk-snarks</a></p>\n                    <p class=\"item mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".item, .items\">\n                        <a href=\"WNS.html\" class=\"text-white\">WNS</a></p>\n                    <p class=\"item mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".item, .items\">\n                        <a href=\"Trust.html\" class=\"text-white\">Trust</a></p>\n                </div>\n            </div>\n\n        </div>\n    </div>\n</section>",
+          "_customHTML": "<section class=\"footer3\" group=\"Footers\" plugins=\"amp-main\" global=\"\" once=\"footer\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline=\"\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"3\">\n        <input type=\"range\" inline=\"\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"3\">\n\n        <select title=\"Columns\" name=\"columnsCount\">\n            <option value=\"1\">1</option>\n            <option value=\"2\">2</option>\n            <option value=\"3\" selected=\"\">3</option>\n        </select>\n\n        <input type=\"checkbox\" title=\"Show Column Title\" name=\"showTitle\" checked=\"\">\n        <input type=\"range\" inline=\"\" title=\"Column 1 Items\" name=\"columnItems1\" min=\"1\" max=\"6\" value=\"3\">\n        <input type=\"range\" inline=\"\" title=\"Column 2 Items\" name=\"columnItems2\" min=\"1\" max=\"6\" value=\"3\" condition=\"columnsCount > 1\">\n        <input type=\"range\" inline=\"\" title=\"Column 3 Items\" name=\"columnItems3\" min=\"1\" max=\"6\" value=\"3\" condition=\"columnsCount > 2\">\n\n        <fieldset type=\"background\" name=\"bg\">\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background4.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#232323\" selected=\"\">\n        </fieldset>\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"container\">\n        <div class=\"mbr-row mbr-justify-content-center\">\n            <div id=\"bildedpt\" class=\"image-block mbr-col-sm-12 mbr-col-md-3\">\n                <amp-img src=\"@PROJECT_PATH@/assets/images/droplet-seddelen-hvit-bg-2957x1340.png\" layout=\"responsive\" width=\"255.97910447761194\" height=\"116\" alt=\"Mobirise\">\n                    <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/droplet-seddelen-hvit-bg-2957x1340.png\" alt=\"Mobirise\" title=\"\">\n                </amp-img>\n            </div>\n\n            <div class=\"items-col mbr-col-sm-12 align-right\" mbr-class=\"{'mbr-col-md-3': columnsCount == 3,\n                             'mbr-col-md-4': columnsCount <= 2}\">\n                <h3 class=\"mbr-fonts-style group-title mbr-bold\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".group-title\">About</h3>\n                <div class=\"items\" mbr-list=\"\" mbr-list-grow=\"columnItems1\">\n                    <p class=\"item mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".item, .items\"><a href=\"Blog_&amp;_Reports.html\" class=\"text-white\">Blog</a></p>\n                    <p class=\"item mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".item, .items\"><a href=\"https://www.reddit.com/r/Droplet_coin/\" target=\"_blank\" class=\"text-white\">Community</a></p>\n                    <p class=\"item mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".item, .items\">\n                        <a href=\"Announcements_&amp;_Updates.html\" class=\"text-white\">Announcements</a></p>\n                </div>\n            </div>\n\n            <div class=\"items-col mbr-col-sm-12 align-right\" mbr-class=\"{'mbr-col-md-3': columnsCount == 3,\n                             'mbr-col-md-4': columnsCount <= 2}\" mbr-if=\"columnsCount > 1\">\n                <h3 class=\"mbr-fonts-style group-title mbr-bold\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".group-title\">\n                    Overview</h3>\n                <div class=\"items\" mbr-list=\"\" mbr-list-grow=\"columnItems2\">\n                    <p class=\"item mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".item, .items\">\n                        <a href=\"Features.html\" class=\"text-white\">Technologies</a></p>\n                    <p class=\"item mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".item, .items\">\n                        <a href=\"Roadmap.html\" class=\"text-white\">Roadmap</a></p>\n                    <p class=\"item mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".item, .items\">\n                        <a href=\"Team.html\" class=\"text-white\">Team</a></p>\n                </div>\n            </div>\n\n            <div id=\"featuresid\" class=\"items-col mbr-col-sm-12 align-right\" mbr-class=\"{'mbr-col-md-3': columnsCount == 3,\n                             'mbr-col-md-4': columnsCount <= 2}\" mbr-if=\"columnsCount > 2\">\n                <h3 class=\"mbr-fonts-style group-title mbr-bold\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".group-title\">\n                    Features</h3>\n                <div class=\"items\" mbr-list=\"\" mbr-list-grow=\"columnItems3\">\n                    <p class=\"item mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".item, .items\">\n                        <a href=\"zk-snarks.html\" class=\"text-white\">Zk-snarks</a></p>\n                    <p class=\"item mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".item, .items\">\n                        <a href=\"WNS.html\" class=\"text-white\">WNS</a></p>\n                    <p class=\"item mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".item, .items\">\n                        <a href=\"Trust.html\" class=\"text-white\">Trust</a></p>\n                </div>\n            </div>\n\n        </div>\n    </div>\n</section>",
           "_cid": "qK9v3ueOgg",
           "_anchor": "footer3-e",
           "_protectedParams": [],
