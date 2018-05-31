@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>register</title>
+    <style>
+        body, html {
+            font-family: sans-serif;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            background-image: url("img2/code in progress bg-01.jpg");
+            background-size: 100%;
+            background-repeat: repeat;
+        }
+
+        #theheader {
+            font-size: 30px;
+            color: white;
+        }
+
+        #theheader:hover {
+            font-size: 30px;
+            color: white;
+            background-color: #092d39;
+            cursor: none;
+        }
+
+        .droplet {
+            font-size: 40px;
+            transition-delay: 0.2s;
+            float: left;
+            margin-top: -45px;
+        }
+        .droplet:hover {
+            font-size: 50px;
+            color: white;
+            border: none;
+            background-color: inherit;
+        }
+
+        a {
+            font-size: 20px;
+            color: white;
+            padding-right: 5px;
+            padding-left: 5px;
+            transition: 0.5s;
+            text-decoration: none;
+        }
+
+        a:hover {
+            border-radius: 500px;
+            background-color: white;
+            color: #092d39;
+            padding-right: 5px;
+            padding-left: 5px;
+            transition: 0.2s;
+        }
+
+        nav {background-color: #092d39;
+            padding-bottom: 10px;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 40px;
+        }
+        .topnav {
+            margin-top: 0px;
+        }
+        .line:hover {
+            background-color: inherit;
+            color: white;
+        }
+
+        #registe {
+            border-radius: 500px;
+            background-color: white;
+            color: #092d39;
+            padding-right: 5px;
+            padding-left: 5px;
+            transition: 0.2s;
+        }
+
+    </style>
+</head>
+<body>
+
+
+<!--NAV START-->
+<nav>
+    <div class="topnav" align="right">
+        <a id="home" class="droplet" href="#"><img style="margin-right: 10px; margin-top: 5px" src="img2/droplet%20logo%20png%20-%20uten%20transparency.png" height="60px"; width="60px">DROPLET</a>
+        <a id="foru" style="margin-right: 25px" href="#">Forum</a>
+        <a id="abou" style="margin-right: 25px" href="#">About</a>
+        <a id="logi" href="#">Login</a>
+        <a class="line">|</a>
+        <a id="registe" href="#">Register</a>
+    </div>
+
+</nav>
+<!--NAV END-->
+
+<!--links start-->
+<script>
+    document.getElementById("abou").onclick = function () {
+        location.href = "forum%20about.html";
+    };
+
+    document.getElementById("foru").onclick = function () {
+        location.href = "forum%20forum.html";
+    };
+
+    document.getElementById("registe").onclick = function () {
+        location.href = "forum%20register.html";
+    };
+
+    document.getElementById("logi").onclick = function () {
+        location.href = "forum%20login.html";
+    };
+
+    document.getElementById("home").onclick = function () {
+        location.href = "forum%20nightmode.html";
+    };
+</script>
+<!--links end-->
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>News</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            background-color: #092d39;
+            overflow-x: hidden;
+            overflow-y: hidden;
+        }
+
+        .theheader {
+            font-size: 30px;
+            color: white;
+        }
+
+        .theheader:hover {
+            font-size: 30px;
+            color: white;
+            background-color: #092d39;
+            cursor: default;
+        }
+
+        .droplet {
+            font-size: 40px;
+            transition-delay: 0.2s;
+            float: left;
+            margin-top: -45px;
+        }
+        .droplet:hover {
+            font-size: 50px;
+            color: white;
+            border: none;
+            background-color: inherit;
+        }
+
+        a {
+            font-size: 20px;
+            color: white;
+            padding-right: 5px;
+            padding-left: 5px;
+            transition: 0.5s;
+            text-decoration: none;
+        }
+
+        a:hover {
+            border-radius: 500px;
+            background-color: white;
+            color: #092d39;
+            padding-right: 5px;
+            padding-left: 5px;
+            transition: 0.2s;
+        }
+
+        nav {background-color: #092d39;
+            padding-bottom: 10px;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 40px;
+        }
+        .topnav {
+            margin-top: 0px;
+        }
+        .line:hover {
+            background-color: inherit;
+            color: white;
+        }
+
+        .newsarticlesfirstrow {
+            margin-top: 100px;
+            display: flex;
+            width: 80%;
+            margin-left: 10%;
+            margin-right: 10%;
+        }
+        .newsarticlesfirstrow > article {
+            border: 15px solid #094b58;
+            height: 200px;
+            flex: 1;
+            transition: 0.4s;
+            background-size: cover;
+            background-position: center center;
+        }
+        .newsarticlesfirstrow > article:hover {
+            flex: 3;
+            transform: scale(1.5);
+            opacity: 1;
+            z-index: 1000;
+            height: 600px;
+            margin-top: 150px;
+            transition-delay: 0.5s;
+            border: 10px solid green;
+        }
+        .newsarticlesfirstrow > article:first-child {
+            transform-origin: left;
+        }
+        .newsarticlesfirstrow > article:last-child {
+            transform-origin: right;
+        }
+
+    </style>
+</head>
+<body>
+
+
+<!--NAV START-->
+<nav>
+    <div class="topnav" align="right">
+        <a id="home" class="droplet" href="#"><img style="margin-right: 10px; margin-top: 5px" src="img2/droplet%20logo%20png%20-%20uten%20transparency.png" height="60px"; width="60px">DROPLET</a>
+        <a id="foru" style="margin-right: 25px" href="#">Forum</a>
+        <a id="abou" style="margin-right: 25px" href="#">About</a>
+        <a id="logi" href="#">Login</a>
+        <a class="line">|</a>
+        <a id="registe" href="#">Register</a>
+    </div>
+
+</nav>
+<!--NAV END-->
+
+<!--links start-->
+<script>
+    document.getElementById("abou").onclick = function () {
+        location.href = "forum%20about.html";
+    };
+
+    document.getElementById("foru").onclick = function () {
+        location.href = "forum%20forum.html";
+    };
+
+    document.getElementById("registe").onclick = function () {
+        location.href = "forum%20register.html";
+    };
+
+    document.getElementById("logi").onclick = function () {
+        location.href = "forum%20login.html";
+    };
+
+    document.getElementById("home").onclick = function () {
+        location.href = "forum%20nightmode.html";
+    };
+</script>
+<!--links end-->
+
+
+
+
+<h1 class="theheader" align="center">News</h1>
+<div id="newsdiv">
+    <section class="newsarticlesfirstrow">
+        <article><iframe src="https://cointelegraph.com/press-releases" height="100%" width="100%"></iframe></article>
+        <article><iframe src="https://www.coindesk.com/" height="100%" width="100%"></iframe></article>
+        <article><iframe src="https://cryptoticker.io" height="100%" width="100%"></iframe></article>
+    </section>
+    <section style="margin-top: 0px" class="newsarticlesfirstrow">
+        <article><iframe src="https://www.crypto-news.net/forum news.html" height="100%" width="100%"></iframe></article>
+        <article><iframe src="https://www.fxstreet.com/cryptocurrencies/news" height="100%" width="100%"></iframe></article>
+        <article><iframe src="https://cryptocurrencynews.com/" height="100%" width="100%"></iframe></article>
+    </section>
+    <section style="margin-top: 0px" class="newsarticlesfirstrow">
+        <article><iframe src="https://altcointoday.com/" height="100%" width="100%"></iframe></article>
+        <article><iframe src="https://coins.live/news/forum news.html" height="100%" width="100%"></iframe></article>
+        <article><iframe src="https://www.ccn.com/" height="100%" width="100%"></iframe></article>
+    </section>
+</div>
+
+
+<img src="img2/tv%20ben.png" style="margin-left: 35%">
+
+
+</body>
+</html>

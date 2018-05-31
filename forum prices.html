@@ -1,0 +1,1356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>prices</title>
+    <style>
+
+        body {
+            font-family: sans-serif;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            background-color: #092d39;
+        }
+
+        #theheader {
+            font-size: 30px;
+            color: white;
+        }
+
+        #theheader:hover {
+            font-size: 30px;
+            color: white;
+            background-color: #092d39;
+            cursor: none;
+        }
+
+        .droplet {
+            font-size: 40px;
+            transition-delay: 0.2s;
+            float: left;
+            margin-top: -45px;
+        }
+        .droplet:hover {
+            font-size: 50px;
+            color: white;
+            border: none;
+            background-color: inherit;
+        }
+
+        a {
+            font-size: 20px;
+            color: white;
+            padding-right: 5px;
+            padding-left: 5px;
+            transition: 0.5s;
+            text-decoration: none;
+        }
+
+        a:hover {
+            border-radius: 500px;
+            background-color: white;
+            color: #092d39;
+            padding-right: 5px;
+            padding-left: 5px;
+            transition: 0.2s;
+        }
+
+        nav {background-color: #092d39;
+            padding-bottom: 10px;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 40px;
+        }
+        .topnav {
+            margin-top: 0px;
+        }
+        .line:hover {
+            background-color: inherit;
+            color: white;
+        }
+
+        #pricetablenmren {
+            background-color: black;
+            color: white;
+            width: 60%;
+            border: 5px solid #092d39;
+            float: right;
+            margin-top: -1050px;
+            margin-right: 20%;
+        }
+
+        tr {
+            color: #428bca;
+        }
+
+        #oversikt {
+            font-size: 20px;
+            background-color: #094b58;
+            color: white;
+        }
+
+        #tableprices {
+            overflow-x: hidden;
+            overflow-y: scroll;
+            max-height: 500px;
+        }
+
+        #weeklygainer {
+            width: 20%;
+            height: 400px;
+            font-size: 20px;
+            font-family: sans-serif;
+            margin-right: 10px;
+            margin-left: 10px;
+            margin-top: 8%;
+        }
+
+        #weeklygainerheader {
+            font-size: 35px;
+            color: green;
+            font-family: sans-serif;
+            margin-right: 20px;
+        }
+
+        #weeklyloser {
+            width: 20%;
+            height: 400px;
+            font-size: 20px;
+            font-family: sans-serif;
+            margin-right: 10px;
+            margin-left: 10px;
+            margin-top: 5%;
+        }
+
+        #weeklyloserheader {
+            font-size: 35px;
+            color: red;
+            font-family: sans-serif;
+            margin-right: 20px;
+        }
+
+
+
+
+        /*TEXT CAOS FIX FOR SMALL DEVICES*/
+        @media screen and (max-width: 1569px) {
+            #weeklygainer {
+                width: 20%;
+                height: 500px;
+                font-size: 15px;
+                font-family: sans-serif;
+                margin-right: 10px;
+                margin-left: -10px;
+                margin-top: 5%;
+            }
+
+            #weeklygainerheader {
+                font-size: 25px;
+                color: green;
+                font-family: sans-serif;
+                margin-right: 20px;
+            }
+
+            #weeklyloser {
+                width: 20%;
+                height: 500px;
+                font-size: 15px;
+                font-family: sans-serif;
+                margin-right: 10px;
+                margin-left: -10px;
+                margin-top: 5%;
+            }
+
+            #weeklyloserheader {
+                font-size: 25px;
+                color: red;
+                font-family: sans-serif;
+                margin-right: 20px;
+            }
+
+        }
+
+        /*TEXT CAOS FIX FOR SMALL DEVICES*/
+        @media screen and (max-width: 1240px) {
+            #weeklygainer {
+                width: 20%;
+                height: 500px;
+                font-size: 10px;
+                font-family: sans-serif;
+                margin-right: 10px;
+                margin-left: -10px;
+                margin-top: 5%;
+            }
+
+            #weeklygainerheader {
+                font-size: 15px;
+                color: green;
+                font-family: sans-serif;
+                margin-right: 20px;
+            }
+
+            #weeklyloser {
+                width: 20%;
+                height: 500px;
+                font-size: 10px;
+                font-family: sans-serif;
+                margin-right: 10px;
+                margin-left: -10px;
+                margin-top: 5%;
+            }
+
+            #weeklyloserheader {
+                font-size: 15px;
+                color: red;
+                font-family: sans-serif;
+                margin-right: 20px;
+            }
+
+        }
+
+        /*TEXT CAOS FIX FOR SMALL DEVICES*/
+        @media screen and (max-width: 1900px) {
+            #pricetablenmren {
+                background-color: black;
+                color: white;
+                width: 60%;
+                border: 5px solid #092d39;
+                float: right;
+                margin-top: -950px;
+                margin-right: 20%;
+            }
+
+        }
+
+
+    </style>
+</head>
+<body>
+
+
+<!--NAV START-->
+<nav>
+    <div class="topnav" align="right">
+        <a id="home" class="droplet" href="#"><img style="margin-right: 10px; margin-top: 5px" src="img2/droplet%20logo%20png%20-%20uten%20transparency.png" height="60px"; width="60px">DROPLET</a>
+        <a id="foru" style="margin-right: 25px" href="#">Forum</a>
+        <a id="abou" style="margin-right: 25px" href="#">About</a>
+        <a id="logi" href="#">Login</a>
+        <a class="line">|</a>
+        <a id="registe" href="#">Register</a>
+    </div>
+
+</nav>
+<!--NAV END-->
+
+<!--links start-->
+<script>
+document.getElementById("abou").onclick = function () {
+    location.href = "forum%20about.html";
+};
+
+document.getElementById("foru").onclick = function () {
+    location.href = "forum%20forum.html";
+};
+
+document.getElementById("registe").onclick = function () {
+    location.href = "forum%20register.html";
+};
+
+document.getElementById("logi").onclick = function () {
+    location.href = "forum%20login.html";
+};
+
+document.getElementById("home").onclick = function () {
+    location.href = "forum%20nightmode.html";
+};
+</script>
+<!--links end-->
+
+<h1 align="center" id="theheader">Top Coins</h1>
+
+<div id="weeklygainer">
+    <h1 align="center" id="weeklygainerheader">GAINER OF THE WEEK</h1>
+    <table style="margin-left: 20px">
+       <tr>
+           <th></th>
+           <th style="color: green">NAME</th>
+           <th></th>
+           <th style="color: green">PRICE</th>
+           <th></th>
+           <th style="color: green">GAIN</th>
+       </tr>
+       <tr id="weeklygaincoin"></tr>
+    </table>
+</div>
+
+
+<div id="weeklyloser">
+    <h1 align="center" id="weeklyloserheader">LOSER OF THE WEEK</h1>
+    <table  style="margin-left: 20px">
+        <tr>
+            <th></th>
+            <th style="color: red;">NAME</th>
+            <th></th>
+            <th style="color: red;">PRICE</th>
+            <th></th>
+            <th style="color: red;">LOSS</th>
+        </tr>
+        <tr id="weeklylosercoin"></tr>
+    </table>
+</div>
+</div>
+
+
+<!--PRICETABLE-->
+    <table id="pricetablenmren">
+        <tbody  id="tableprices">
+        <tr id="oversikt">
+            <th></th>
+            <td>Name</td>
+            <td>Market Cap</td>
+            <td>Price</td>
+
+            <td>Change (24h)</td>
+            <td>Change (7d)</td>
+        </tr>
+
+        <tr id="zencash"></tr>
+
+        <tr id="bitcoin"></tr>
+
+        <tr id="dash"></tr>
+
+        <tr id="cardano"></tr>
+
+        <tr id="litecoin"></tr>
+
+        <tr id="monero"></tr>
+
+        <tr id="ripple"></tr>
+
+        <tr id="stellar"></tr>
+
+        <tr id="nem"></tr>
+
+        <tr id="nano"></tr>
+
+        <tr id="bitshares"></tr>
+
+        <tr id="ark"></tr>
+
+        <tr id="ubiq"></tr>
+
+        <tr id="neo"></tr>
+
+        <tr id="verge"></tr>
+
+        <tr id="ethereum"></tr>
+
+        <tr id="zcash"></tr>
+
+        <tr id="pivx"></tr>
+
+        <tr id="elastos"></tr>
+
+        <tr id="zcoin"></tr>
+
+        <tr id="wanchain"></tr>
+
+        <tr id="steem"></tr>
+
+        <tr id="decred"></tr>
+
+        <tr id="lisk"></tr>
+
+        <tr id="siacoin"></tr>
+
+        <tr id="smartcash"></tr>
+
+        <tr id="ardor"></tr>
+
+        <tr id="waves"></tr>
+
+        <tr id="ravencoin"></tr>
+
+        </tbody>
+    </table>
+
+
+
+
+        <!--SCRIPT FOR PRICES-->
+
+
+
+
+
+
+
+
+
+<!--WEEKLYGAINCOIN SCRIPT-->
+<script>
+    var json = new XMLHttpRequest(); // start a new variable to store the JSON in
+    json.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) { // if HTTP header 200 - ok
+            var object = JSON.parse(this.responseText); // set the variable 'object' to whatever we get back, in our case it is an array of 10 different arrays
+
+            object.forEach(function(currency) { // for each of those arrays, split it into chunks called 'currency'
+                document.getElementById("weeklygaincoin").innerHTML =`
+                <th class="tableimg"><img height="50px" width="50px" src="img2/zencash.png"></th>
+                <td>${currency.name}</td>
+                <td></td>
+                <td>$${currency.price_usd}</td>
+                <td></td>
+                <td style="color: green">${currency.percent_change_7d}%</td>
+            `
+            });
+        }
+    };
+    json.open(
+        "GET", // method
+        "https://api.coinmarketcap.com/v1/ticker/zencash/", // url
+        true // async
+    ); // initialise the request
+    json.send(); //send request
+
+</script>
+
+
+
+
+
+
+
+
+<!--WEEKLYLOSERCOIN SCRIPT-->
+<script>
+    var json = new XMLHttpRequest(); // start a new variable to store the JSON in
+    json.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) { // if HTTP header 200 - ok
+            var object = JSON.parse(this.responseText); // set the variable 'object' to whatever we get back, in our case it is an array of 10 different arrays
+
+            object.forEach(function(currency) { // for each of those arrays, split it into chunks called 'currency'
+                document.getElementById("weeklylosercoin").innerHTML =`
+                <th class="tableimg"><img height="50px" width="50px" src="img2/waves.png"></th>
+                <td>${currency.name}</td>
+                <td></td>
+                <td>$${currency.price_usd}</td>
+                <td></td>
+                <td style="color: red">${currency.percent_change_7d}%</td>
+            `
+            });
+        }
+    };
+    json.open(
+        "GET", // method
+        "https://api.coinmarketcap.com/v1/ticker/waves/", // url
+        true // async
+    ); // initialise the request
+    json.send(); //send request
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<!--ZENCASH SCRIPT-->
+<script>
+    var json = new XMLHttpRequest(); // start a new variable to store the JSON in
+    json.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) { // if HTTP header 200 - ok
+            var object = JSON.parse(this.responseText); // set the variable 'object' to whatever we get back, in our case it is an array of 10 different arrays
+
+            object.forEach(function(currency) { // for each of those arrays, split it into chunks called 'currency'
+                document.getElementById("zencash").innerHTML =`
+                <th class="tableimg"><img height="50px" width="50px" src="img2/zencash.png"> </th>
+                <td>${currency.name}</td>
+                <td>$${currency.market_cap_usd}</td>
+                <td>$${currency.price_usd}</td>
+
+                <td style="color: green">${currency.percent_change_24h}%</td>
+                <td style="color: green">${currency.percent_change_7d}%</td>
+            `
+            });
+        }
+    };
+    json.open(
+        "GET", // method
+        "https://api.coinmarketcap.com/v1/ticker/zencash/", // url
+        true // async
+    ); // initialise the request
+    json.send(); //send request
+
+</script>
+
+<!--BITCOIN SCRIPT-->
+<script>
+    var json = new XMLHttpRequest(); // start a new variable to store the JSON in
+    json.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) { // if HTTP header 200 - ok
+            var object = JSON.parse(this.responseText); // set the variable 'object' to whatever we get back, in our case it is an array of 10 different arrays
+
+            object.forEach(function(currency) { // for each of those arrays, split it into chunks called 'currency'
+                document.getElementById("bitcoin").innerHTML =`
+                <th class="tableimg"><img height="50px" width="50px" src="img2/btc.png"> </th>
+                 <td>${currency.name}</td>
+                <td>$${currency.market_cap_usd}</td>
+                <td>$${currency.price_usd}</td>
+
+                <td style="color: green">${currency.percent_change_24h}%</td>
+                <td style="color: green">${currency.percent_change_7d}%</td>
+            `
+            });
+        }
+    };
+    json.open(
+        "GET", // method
+        "https://api.coinmarketcap.com/v1/ticker/bitcoin/", // url
+        true // async
+    ); // initialise the request
+    json.send(); //send request
+
+</script>
+
+<!--DASH SCRIPT-->
+<script>
+    var json = new XMLHttpRequest(); // start a new variable to store the JSON in
+    json.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) { // if HTTP header 200 - ok
+            var object = JSON.parse(this.responseText); // set the variable 'object' to whatever we get back, in our case it is an array of 10 different arrays
+
+            object.forEach(function(currency) { // for each of those arrays, split it into chunks called 'currency'
+                document.getElementById("dash").innerHTML =`
+                <th class="tableimg"><img height="50px" width="50px" src="img2/Dash.png"> </th>
+                  <td>${currency.name}</td>
+                <td>$${currency.market_cap_usd}</td>
+                <td>$${currency.price_usd}</td>
+
+                <td style="color: green">${currency.percent_change_24h}%</td>
+                <td style="color: green">${currency.percent_change_7d}%</td>
+            `
+            });
+        }
+    };
+    json.open(
+        "GET", // method
+        "https://api.coinmarketcap.com/v1/ticker/dash/", // url
+        true // async
+    ); // initialise the request
+    json.send(); //send request
+
+</script>
+
+
+<!--LITECOIN SCRIPT-->
+<script>
+    var json = new XMLHttpRequest(); // start a new variable to store the JSON in
+    json.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) { // if HTTP header 200 - ok
+            var object = JSON.parse(this.responseText); // set the variable 'object' to whatever we get back, in our case it is an array of 10 different arrays
+
+            object.forEach(function(currency) { // for each of those arrays, split it into chunks called 'currency'
+                document.getElementById("litecoin").innerHTML =`
+                <th class="tableimg"><img height="50px" width="50px" src="img2/litecoin.png"> </th>
+                  <td>${currency.name}</td>
+                <td>$${currency.market_cap_usd}</td>
+                <td>$${currency.price_usd}</td>
+
+                <td style="color: green">${currency.percent_change_24h}%</td>
+                <td style="color: green">${currency.percent_change_7d}%</td>
+            `
+            });
+        }
+    };
+    json.open(
+        "GET", // method
+        "https://api.coinmarketcap.com/v1/ticker/litecoin/", // url
+        true // async
+    ); // initialise the request
+    json.send(); //send request
+
+</script>
+
+
+<!--CARDANO SCRIPT-->
+<script>
+    var json = new XMLHttpRequest(); // start a new variable to store the JSON in
+    json.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) { // if HTTP header 200 - ok
+            var object = JSON.parse(this.responseText); // set the variable 'object' to whatever we get back, in our case it is an array of 10 different arrays
+
+            object.forEach(function(currency) { // for each of those arrays, split it into chunks called 'currency'
+                document.getElementById("cardano").innerHTML =`
+                <th class="tableimg"><img height="50px" width="50px" src="img2/cardano.png"> </th>
+                  <td>${currency.name}</td>
+                <td>$${currency.market_cap_usd}</td>
+                <td>$${currency.price_usd}</td>
+
+                <td style="color: green">${currency.percent_change_24h}%</td>
+                <td style="color: green">${currency.percent_change_7d}%</td>
+            `
+            });
+        }
+    };
+    json.open(
+        "GET", // method
+        "https://api.coinmarketcap.com/v1/ticker/cardano/", // url
+        true // async
+    ); // initialise the request
+    json.send(); //send request
+
+</script>
+
+
+
+<!--STELLAR SCRIPT-->
+<script>
+    var json = new XMLHttpRequest(); // start a new variable to store the JSON in
+    json.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) { // if HTTP header 200 - ok
+            var object = JSON.parse(this.responseText); // set the variable 'object' to whatever we get back, in our case it is an array of 10 different arrays
+
+            object.forEach(function(currency) { // for each of those arrays, split it into chunks called 'currency'
+                document.getElementById("stellar").innerHTML =`
+                <th class="tableimg"><img height="50px" width="50px" src="img2/stellar.png"> </th>
+                  <td>${currency.name}</td>
+                <td>$${currency.market_cap_usd}</td>
+                <td>$${currency.price_usd}</td>
+
+                <td style="color: green">${currency.percent_change_24h}%</td>
+                <td style="color: green">${currency.percent_change_7d}%</td>
+            `
+            });
+        }
+    };
+    json.open(
+        "GET", // method
+        "https://api.coinmarketcap.com/v1/ticker/stellar/", // url
+        true // async
+    ); // initialise the request
+    json.send(); //send request
+
+</script>
+
+
+
+<!--MONERO SCRIPT-->
+<script>
+    var json = new XMLHttpRequest(); // start a new variable to store the JSON in
+    json.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) { // if HTTP header 200 - ok
+            var object = JSON.parse(this.responseText); // set the variable 'object' to whatever we get back, in our case it is an array of 10 different arrays
+
+            object.forEach(function(currency) { // for each of those arrays, split it into chunks called 'currency'
+                document.getElementById("monero").innerHTML =`
+                <th class="tableimg"><img height="50px" width="50px" src="img2/monero.png"> </th>
+                  <td>${currency.name}</td>
+                <td>$${currency.market_cap_usd}</td>
+                <td>$${currency.price_usd}</td>
+
+                <td style="color: green">${currency.percent_change_24h}%</td>
+                <td style="color: green">${currency.percent_change_7d}%</td>
+            `
+            });
+        }
+    };
+    json.open(
+        "GET", // method
+        "https://api.coinmarketcap.com/v1/ticker/monero/", // url
+        true // async
+    ); // initialise the request
+    json.send(); //send request
+
+</script>
+
+
+
+<!--ARK SCRIPT-->
+<script>
+    var json = new XMLHttpRequest(); // start a new variable to store the JSON in
+    json.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) { // if HTTP header 200 - ok
+            var object = JSON.parse(this.responseText); // set the variable 'object' to whatever we get back, in our case it is an array of 10 different arrays
+
+            object.forEach(function(currency) { // for each of those arrays, split it into chunks called 'currency'
+                document.getElementById("ark").innerHTML =`
+                <th class="tableimg"><img height="50px" width="50px" src="img2/ark.png"> </th>
+                  <td>${currency.name}</td>
+                <td>$${currency.market_cap_usd}</td>
+                <td>$${currency.price_usd}</td>
+
+                <td style="color: green">${currency.percent_change_24h}%</td>
+                <td style="color: green">${currency.percent_change_7d}%</td>
+            `
+            });
+        }
+    };
+    json.open(
+        "GET", // method
+        "https://api.coinmarketcap.com/v1/ticker/ark/", // url
+        true // async
+    ); // initialise the request
+    json.send(); //send request
+
+</script>
+
+
+
+<!--NANO SCRIPT-->
+<script>
+    var json = new XMLHttpRequest(); // start a new variable to store the JSON in
+    json.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) { // if HTTP header 200 - ok
+            var object = JSON.parse(this.responseText); // set the variable 'object' to whatever we get back, in our case it is an array of 10 different arrays
+
+            object.forEach(function(currency) { // for each of those arrays, split it into chunks called 'currency'
+                document.getElementById("nano").innerHTML =`
+                <th class="tableimg"><img height="50px" width="50px" src="img2/nano.png"> </th>
+                  <td>${currency.name}</td>
+                <td>$${currency.market_cap_usd}</td>
+                <td>$${currency.price_usd}</td>
+
+                <td style="color: green">${currency.percent_change_24h}%</td>
+                <td style="color: green">${currency.percent_change_7d}%</td>
+            `
+            });
+        }
+    };
+    json.open(
+        "GET", // method
+        "https://api.coinmarketcap.com/v1/ticker/nano/", // url
+        true // async
+    ); // initialise the request
+    json.send(); //send request
+
+</script>
+
+
+
+<!--NEO SCRIPT-->
+<script>
+    var json = new XMLHttpRequest(); // start a new variable to store the JSON in
+    json.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) { // if HTTP header 200 - ok
+            var object = JSON.parse(this.responseText); // set the variable 'object' to whatever we get back, in our case it is an array of 10 different arrays
+
+            object.forEach(function(currency) { // for each of those arrays, split it into chunks called 'currency'
+                document.getElementById("neo").innerHTML =`
+                <th class="tableimg"><img height="50px" width="50px" src="img2/neo.png"> </th>
+                  <td>${currency.name}</td>
+                <td>$${currency.market_cap_usd}</td>
+                <td>$${currency.price_usd}</td>
+
+                <td style="color: green">${currency.percent_change_24h}%</td>
+                <td style="color: green">${currency.percent_change_7d}%</td>
+            `
+            });
+        }
+    };
+    json.open(
+        "GET", // method
+        "https://api.coinmarketcap.com/v1/ticker/neo/", // url
+        true // async
+    ); // initialise the request
+    json.send(); //send request
+
+</script>
+
+
+
+
+<!--UBIQ SCRIPT-->
+<script>
+    var json = new XMLHttpRequest(); // start a new variable to store the JSON in
+    json.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) { // if HTTP header 200 - ok
+            var object = JSON.parse(this.responseText); // set the variable 'object' to whatever we get back, in our case it is an array of 10 different arrays
+
+            object.forEach(function(currency) { // for each of those arrays, split it into chunks called 'currency'
+                document.getElementById("ubiq").innerHTML =`
+                <th class="tableimg"><img height="50px" width="50px" src="img2/ubiq.png"> </th>
+                  <td>${currency.name}</td>
+                <td>$${currency.market_cap_usd}</td>
+                <td>$${currency.price_usd}</td>
+
+                <td style="color: green">${currency.percent_change_24h}%</td>
+                <td style="color: green">${currency.percent_change_7d}%</td>
+            `
+            });
+        }
+    };
+    json.open(
+        "GET", // method
+        "https://api.coinmarketcap.com/v1/ticker/ubiq/", // url
+        true // async
+    ); // initialise the request
+    json.send(); //send request
+
+</script>
+
+
+
+
+<!--NEM SCRIPT-->
+<script>
+    var json = new XMLHttpRequest(); // start a new variable to store the JSON in
+    json.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) { // if HTTP header 200 - ok
+            var object = JSON.parse(this.responseText); // set the variable 'object' to whatever we get back, in our case it is an array of 10 different arrays
+
+            object.forEach(function(currency) { // for each of those arrays, split it into chunks called 'currency'
+                document.getElementById("nem").innerHTML =`
+                <th class="tableimg"><img height="50px" width="50px" src="img2/nem.png"> </th>
+                  <td>${currency.name}</td>
+                <td>$${currency.market_cap_usd}</td>
+                <td>$${currency.price_usd}</td>
+
+                <td style="color: green">${currency.percent_change_24h}%</td>
+                <td style="color: green">${currency.percent_change_7d}%</td>
+            `
+            });
+        }
+    };
+    json.open(
+        "GET", // method
+        "https://api.coinmarketcap.com/v1/ticker/nem/", // url
+        true // async
+    ); // initialise the request
+    json.send(); //send request
+
+</script>
+
+
+
+<!--BITSHARES SCRIPT-->
+<script>
+    var json = new XMLHttpRequest(); // start a new variable to store the JSON in
+    json.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) { // if HTTP header 200 - ok
+            var object = JSON.parse(this.responseText); // set the variable 'object' to whatever we get back, in our case it is an array of 10 different arrays
+
+            object.forEach(function(currency) { // for each of those arrays, split it into chunks called 'currency'
+                document.getElementById("bitshares").innerHTML =`
+                <th class="tableimg"><img height="50px" width="50px" src="img2/bitshares.png"> </th>
+                  <td>${currency.name}</td>
+                <td>$${currency.market_cap_usd}</td>
+                <td>$${currency.price_usd}</td>
+
+                <td style="color: green">${currency.percent_change_24h}%</td>
+                <td style="color: green">${currency.percent_change_7d}%</td>
+            `
+            });
+        }
+    };
+    json.open(
+        "GET", // method
+        "https://api.coinmarketcap.com/v1/ticker/bitshares/", // url
+        true // async
+    ); // initialise the request
+    json.send(); //send request
+
+</script>
+
+
+<!--RIPPLE SCRIPT-->
+<script>
+    var json = new XMLHttpRequest(); // start a new variable to store the JSON in
+    json.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) { // if HTTP header 200 - ok
+            var object = JSON.parse(this.responseText); // set the variable 'object' to whatever we get back, in our case it is an array of 10 different arrays
+
+            object.forEach(function(currency) { // for each of those arrays, split it into chunks called 'currency'
+                document.getElementById("ripple").innerHTML =`
+                <th class="tableimg"><img height="50px" width="50px" src="img2/ripple.png"> </th>
+                  <td>${currency.name}</td>
+                <td>$${currency.market_cap_usd}</td>
+                <td>$${currency.price_usd}</td>
+
+                <td style="color: green">${currency.percent_change_24h}%</td>
+                <td style="color: green">${currency.percent_change_7d}%</td>
+            `
+            });
+        }
+    };
+    json.open(
+        "GET", // method
+        "https://api.coinmarketcap.com/v1/ticker/ripple/", // url
+        true // async
+    ); // initialise the request
+    json.send(); //send request
+
+</script>
+
+<!--ZCASH SCRIPT-->
+<script>
+    var json = new XMLHttpRequest(); // start a new variable to store the JSON in
+    json.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) { // if HTTP header 200 - ok
+            var object = JSON.parse(this.responseText); // set the variable 'object' to whatever we get back, in our case it is an array of 10 different arrays
+
+            object.forEach(function(currency) { // for each of those arrays, split it into chunks called 'currency'
+                document.getElementById("zcash").innerHTML =`
+                <th class="tableimg"><img height="50px" width="50px" src="img2/zcash.png"> </th>
+                  <td>${currency.name}</td>
+                <td>$${currency.market_cap_usd}</td>
+                <td>$${currency.price_usd}</td>
+
+                <td style="color: green">${currency.percent_change_24h}%</td>
+                <td style="color: green">${currency.percent_change_7d}%</td>
+            `
+            });
+        }
+    };
+    json.open(
+        "GET", // method
+        "https://api.coinmarketcap.com/v1/ticker/zcash/", // url
+        true // async
+    ); // initialise the request
+    json.send(); //send request
+
+</script>
+
+
+<!--ETHEREUM SCRIPT-->
+<script>
+    var json = new XMLHttpRequest(); // start a new variable to store the JSON in
+    json.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) { // if HTTP header 200 - ok
+            var object = JSON.parse(this.responseText); // set the variable 'object' to whatever we get back, in our case it is an array of 10 different arrays
+
+            object.forEach(function(currency) { // for each of those arrays, split it into chunks called 'currency'
+                document.getElementById("ethereum").innerHTML =`
+                <th class="tableimg"><img height="50px" width="50px" src="img2/ethereum.png"> </th>
+                  <td>${currency.name}</td>
+                <td>$${currency.market_cap_usd}</td>
+                <td>$${currency.price_usd}</td>
+
+                <td style="color: green">${currency.percent_change_24h}%</td>
+                <td style="color: green">${currency.percent_change_7d}%</td>
+            `
+            });
+        }
+    };
+    json.open(
+        "GET", // method
+        "https://api.coinmarketcap.com/v1/ticker/ethereum/", // url
+        true // async
+    ); // initialise the request
+    json.send(); //send request
+
+</script>
+
+
+<!--VERGE SCRIPT-->
+<script>
+    var json = new XMLHttpRequest(); // start a new variable to store the JSON in
+    json.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) { // if HTTP header 200 - ok
+            var object = JSON.parse(this.responseText); // set the variable 'object' to whatever we get back, in our case it is an array of 10 different arrays
+
+            object.forEach(function(currency) { // for each of those arrays, split it into chunks called 'currency'
+                document.getElementById("verge").innerHTML =`
+                <th class="tableimg"><img height="50px" width="50px" src="img2/verge.png"> </th>
+                  <td>${currency.name}</td>
+                <td>$${currency.market_cap_usd}</td>
+                <td>$${currency.price_usd}</td>
+
+                <td style="color: green">${currency.percent_change_24h}%</td>
+                <td style="color: green">${currency.percent_change_7d}%</td>
+            `
+            });
+        }
+    };
+    json.open(
+        "GET", // method
+        "https://api.coinmarketcap.com/v1/ticker/verge/", // url
+        true // async
+    ); // initialise the request
+    json.send(); //send request
+
+</script>
+
+
+<!--ZCOIN SCRIPT-->
+<script>
+    var json = new XMLHttpRequest(); // start a new variable to store the JSON in
+    json.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) { // if HTTP header 200 - ok
+            var object = JSON.parse(this.responseText); // set the variable 'object' to whatever we get back, in our case it is an array of 10 different arrays
+
+            object.forEach(function(currency) { // for each of those arrays, split it into chunks called 'currency'
+                document.getElementById("zcoin").innerHTML =`
+                <th class="tableimg"><img height="50px" width="50px" src="img2/zcoin.png"> </th>
+                  <td>${currency.name}</td>
+                <td>$${currency.market_cap_usd}</td>
+                <td>$${currency.price_usd}</td>
+
+                <td style="color: green">${currency.percent_change_24h}%</td>
+                <td style="color: green">${currency.percent_change_7d}%</td>
+            `
+            });
+        }
+    };
+    json.open(
+        "GET", // method
+        "https://api.coinmarketcap.com/v1/ticker/zcoin/", // url
+        true // async
+    ); // initialise the request
+    json.send(); //send request
+
+</script>
+
+
+
+<!--WANCHAIN SCRIPT-->
+<script>
+    var json = new XMLHttpRequest(); // start a new variable to store the JSON in
+    json.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) { // if HTTP header 200 - ok
+            var object = JSON.parse(this.responseText); // set the variable 'object' to whatever we get back, in our case it is an array of 10 different arrays
+
+            object.forEach(function(currency) { // for each of those arrays, split it into chunks called 'currency'
+                document.getElementById("wanchain").innerHTML =`
+                <th class="tableimg"><img height="50px" width="50px" src="img2/wanchain.png"> </th>
+                  <td>${currency.name}</td>
+                <td>$${currency.market_cap_usd}</td>
+                <td>$${currency.price_usd}</td>
+
+                <td style="color: green">${currency.percent_change_24h}%</td>
+                <td style="color: green">${currency.percent_change_7d}%</td>
+            `
+            });
+        }
+    };
+    json.open(
+        "GET", // method
+        "https://api.coinmarketcap.com/v1/ticker/wanchain/", // url
+        true // async
+    ); // initialise the request
+    json.send(); //send request
+
+</script>
+
+
+
+<!--PIVX SCRIPT-->
+<script>
+    var json = new XMLHttpRequest(); // start a new variable to store the JSON in
+    json.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) { // if HTTP header 200 - ok
+            var object = JSON.parse(this.responseText); // set the variable 'object' to whatever we get back, in our case it is an array of 10 different arrays
+
+            object.forEach(function(currency) { // for each of those arrays, split it into chunks called 'currency'
+                document.getElementById("pivx").innerHTML =`
+                <th class="tableimg"><img height="50px" width="50px" src="img2/pivx.png"> </th>
+                  <td>${currency.name}</td>
+                <td>$${currency.market_cap_usd}</td>
+                <td>$${currency.price_usd}</td>
+
+                <td style="color: green">${currency.percent_change_24h}%</td>
+                <td style="color: green">${currency.percent_change_7d}%</td>
+            `
+            });
+        }
+    };
+    json.open(
+        "GET", // method
+        "https://api.coinmarketcap.com/v1/ticker/pivx/", // url
+        true // async
+    ); // initialise the request
+    json.send(); //send request
+
+</script>
+
+
+
+<!--ELASTOS SCRIPT-->
+<script>
+    var json = new XMLHttpRequest(); // start a new variable to store the JSON in
+    json.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) { // if HTTP header 200 - ok
+            var object = JSON.parse(this.responseText); // set the variable 'object' to whatever we get back, in our case it is an array of 10 different arrays
+
+            object.forEach(function(currency) { // for each of those arrays, split it into chunks called 'currency'
+                document.getElementById("elastos").innerHTML =`
+                <th class="tableimg"><img height="50px" width="50px" src="img2/elastos.png"> </th>
+                  <td>${currency.name}</td>
+                <td>$${currency.market_cap_usd}</td>
+                <td>$${currency.price_usd}</td>
+
+                <td style="color: green">${currency.percent_change_24h}%</td>
+                <td style="color: green">${currency.percent_change_7d}%</td>
+            `
+            });
+        }
+    };
+    json.open(
+        "GET", // method
+        "https://api.coinmarketcap.com/v1/ticker/elastos/", // url
+        true // async
+    ); // initialise the request
+    json.send(); //send request
+
+</script>
+
+
+
+<!--STEEM SCRIPT-->
+<script>
+    var json = new XMLHttpRequest(); // start a new variable to store the JSON in
+    json.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) { // if HTTP header 200 - ok
+            var object = JSON.parse(this.responseText); // set the variable 'object' to whatever we get back, in our case it is an array of 10 different arrays
+
+            object.forEach(function(currency) { // for each of those arrays, split it into chunks called 'currency'
+                document.getElementById("steem").innerHTML =`
+                <th class="tableimg"><img height="50px" width="50px" src="img2/steem.png"> </th>
+                  <td>${currency.name}</td>
+                <td>$${currency.market_cap_usd}</td>
+                <td>$${currency.price_usd}</td>
+
+                <td style="color: green">${currency.percent_change_24h}%</td>
+                <td style="color: green">${currency.percent_change_7d}%</td>
+            `
+            });
+        }
+    };
+    json.open(
+        "GET", // method
+        "https://api.coinmarketcap.com/v1/ticker/steem/", // url
+        true // async
+    ); // initialise the request
+    json.send(); //send request
+
+</script>
+
+
+
+<!--DECRED SCRIPT-->
+<script>
+    var json = new XMLHttpRequest(); // start a new variable to store the JSON in
+    json.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) { // if HTTP header 200 - ok
+            var object = JSON.parse(this.responseText); // set the variable 'object' to whatever we get back, in our case it is an array of 10 different arrays
+
+            object.forEach(function(currency) { // for each of those arrays, split it into chunks called 'currency'
+                document.getElementById("decred").innerHTML =`
+                <th class="tableimg"><img height="50px" width="50px" src="img2/decred.png"> </th>
+                  <td>${currency.name}</td>
+                <td>$${currency.market_cap_usd}</td>
+                <td>$${currency.price_usd}</td>
+
+                <td style="color: green">${currency.percent_change_24h}%</td>
+                <td style="color: green">${currency.percent_change_7d}%</td>
+            `
+            });
+        }
+    };
+    json.open(
+        "GET", // method
+        "https://api.coinmarketcap.com/v1/ticker/decred/", // url
+        true // async
+    ); // initialise the request
+    json.send(); //send request
+
+</script>
+
+
+
+<!--SIACOIN SCRIPT-->
+<script>
+    var json = new XMLHttpRequest(); // start a new variable to store the JSON in
+    json.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) { // if HTTP header 200 - ok
+            var object = JSON.parse(this.responseText); // set the variable 'object' to whatever we get back, in our case it is an array of 10 different arrays
+
+            object.forEach(function(currency) { // for each of those arrays, split it into chunks called 'currency'
+                document.getElementById("siacoin").innerHTML =`
+                <th class="tableimg"><img height="50px" width="50px" src="img2/siacoin.png"> </th>
+                  <td>${currency.name}</td>
+                <td>$${currency.market_cap_usd}</td>
+                <td>$${currency.price_usd}</td>
+
+                <td style="color: green">${currency.percent_change_24h}%</td>
+                <td style="color: green">${currency.percent_change_7d}%</td>
+            `
+            });
+        }
+    };
+    json.open(
+        "GET", // method
+        "https://api.coinmarketcap.com/v1/ticker/siacoin/", // url
+        true // async
+    ); // initialise the request
+    json.send(); //send request
+
+</script>
+
+
+
+<!--LISK SCRIPT-->
+<script>
+    var json = new XMLHttpRequest(); // start a new variable to store the JSON in
+    json.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) { // if HTTP header 200 - ok
+            var object = JSON.parse(this.responseText); // set the variable 'object' to whatever we get back, in our case it is an array of 10 different arrays
+
+            object.forEach(function(currency) { // for each of those arrays, split it into chunks called 'currency'
+                document.getElementById("lisk").innerHTML =`
+                <th class="tableimg"><img height="50px" width="50px" src="img2/lisk.png"> </th>
+                  <td>${currency.name}</td>
+                <td>$${currency.market_cap_usd}</td>
+                <td>$${currency.price_usd}</td>
+
+                <td style="color: green">${currency.percent_change_24h}%</td>
+                <td style="color: green">${currency.percent_change_7d}%</td>
+            `
+            });
+        }
+    };
+    json.open(
+        "GET", // method
+        "https://api.coinmarketcap.com/v1/ticker/lisk/", // url
+        true // async
+    ); // initialise the request
+    json.send(); //send request
+
+</script>
+
+
+
+<!--SMARTCASH SCRIPT-->
+<script>
+    var json = new XMLHttpRequest(); // start a new variable to store the JSON in
+    json.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) { // if HTTP header 200 - ok
+            var object = JSON.parse(this.responseText); // set the variable 'object' to whatever we get back, in our case it is an array of 10 different arrays
+
+            object.forEach(function(currency) { // for each of those arrays, split it into chunks called 'currency'
+                document.getElementById("smartcash").innerHTML =`
+                <th class="tableimg"><img height="50px" width="50px" src="img2/smartcash.png"> </th>
+                  <td>${currency.name}</td>
+                <td>$${currency.market_cap_usd}</td>
+                <td>$${currency.price_usd}</td>
+
+                <td style="color: green">${currency.percent_change_24h}%</td>
+                <td style="color: green">${currency.percent_change_7d}%</td>
+            `
+            });
+        }
+    };
+    json.open(
+        "GET", // method
+        "https://api.coinmarketcap.com/v1/ticker/smartcash/", // url
+        true // async
+    ); // initialise the request
+    json.send(); //send request
+
+</script>
+
+
+
+<!--ARDOR SCRIPT-->
+<script>
+    var json = new XMLHttpRequest(); // start a new variable to store the JSON in
+    json.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) { // if HTTP header 200 - ok
+            var object = JSON.parse(this.responseText); // set the variable 'object' to whatever we get back, in our case it is an array of 10 different arrays
+
+            object.forEach(function(currency) { // for each of those arrays, split it into chunks called 'currency'
+                document.getElementById("ardor").innerHTML =`
+                <th class="tableimg"><img height="50px" width="50px" src="img2/ardor.png"> </th>
+                  <td>${currency.name}</td>
+                <td>$${currency.market_cap_usd}</td>
+                <td>$${currency.price_usd}</td>
+
+                <td style="color: green">${currency.percent_change_24h}%</td>
+                <td style="color: green">${currency.percent_change_7d}%</td>
+            `
+            });
+        }
+    };
+    json.open(
+        "GET", // method
+        "https://api.coinmarketcap.com/v1/ticker/ardor/", // url
+        true // async
+    ); // initialise the request
+    json.send(); //send request
+
+</script>
+
+
+
+<!--WAVES SCRIPT-->
+<script>
+    var json = new XMLHttpRequest(); // start a new variable to store the JSON in
+    json.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) { // if HTTP header 200 - ok
+            var object = JSON.parse(this.responseText); // set the variable 'object' to whatever we get back, in our case it is an array of 10 different arrays
+
+            object.forEach(function(currency) { // for each of those arrays, split it into chunks called 'currency'
+                document.getElementById("waves").innerHTML =`
+                <th class="tableimg"><img height="50px" width="50px" src="img2/waves.png"> </th>
+                  <td>${currency.name}</td>
+                <td>$${currency.market_cap_usd}</td>
+                <td>$${currency.price_usd}</td>
+
+                <td style="color: green">${currency.percent_change_24h}%</td>
+                <td style="color: green">${currency.percent_change_7d}%</td>
+            `
+            });
+        }
+    };
+    json.open(
+        "GET", // method
+        "https://api.coinmarketcap.com/v1/ticker/waves/", // url
+        true // async
+    ); // initialise the request
+    json.send(); //send request
+
+</script>
+
+
+
+<!--RAVENCOIN SCRIPT-->
+<script>
+    var json = new XMLHttpRequest(); // start a new variable to store the JSON in
+    json.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) { // if HTTP header 200 - ok
+            var object = JSON.parse(this.responseText); // set the variable 'object' to whatever we get back, in our case it is an array of 10 different arrays
+
+            object.forEach(function(currency) { // for each of those arrays, split it into chunks called 'currency'
+                document.getElementById("ravencoin").innerHTML =`
+                <th class="tableimg"><img height="50px" width="50px" src="img2/ravencoin.png"> </th>
+                  <td>${currency.name}</td>
+                <td>$${currency.market_cap_usd}</td>
+                <td>$${currency.price_usd}</td>
+
+                <td style="color: green">${currency.percent_change_24h}%</td>
+                <td style="color: green">${currency.percent_change_7d}%</td>
+            `
+            });
+        }
+    };
+    json.open(
+        "GET", // method
+        "https://api.coinmarketcap.com/v1/ticker/ravencoin/", // url
+        true // async
+    ); // initialise the request
+    json.send(); //send request
+
+</script>
+
+
+
+
+</body>
+</html>

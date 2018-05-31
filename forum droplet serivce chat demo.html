@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Droplet - Service Chat</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.4/foundation-flex.css">
+    <style>
+        body {
+            font-family: sans-serif;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            background-color: #092d39;
+        }
+
+        #theheader {
+            font-size: 40px;
+            color: white;
+        }
+
+        #theheader:hover {
+            font-size: 40px;
+            color: white;
+            background-color: #092d39;
+            cursor: none;
+        }
+
+        .droplet {
+            font-size: 40px;
+            transition-delay: 0.2s;
+            float: left;
+            margin-top: -45px;
+        }
+        .droplet:hover {
+            font-size: 50px;
+            color: white;
+            border: none;
+            background-color: inherit;
+        }
+
+        a {
+            font-size: 20px;
+            color: white;
+            padding-right: 5px;
+            padding-left: 5px;
+            transition: 0.5s;
+            text-decoration: none;
+        }
+
+        a:hover {
+            border-radius: 500px;
+            background-color: white;
+            color: #092d39;
+            padding-right: 5px;
+            padding-left: 5px;
+            transition: 0.2s;
+        }
+
+        nav {background-color: #092d39;
+            padding-bottom: 10px;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 40px;
+        }
+        .topnav {
+            margin-top: 0px;
+        }
+        .line:hover {
+            background-color: inherit;
+            color: white;
+        }
+
+        #servicechatbox {
+            width: 60%;
+            margin-left: 20%;
+            margin-top: 5%;
+        }
+        #messagefield {
+            overflow-x: hidden;
+            overflow-y: scroll;
+            max-height: 400px;
+        }
+
+        #submitbutton {
+            width: 100%;
+            background-color: darkgreen;
+        }
+
+        tr {
+            border: 1px solid grey;
+        }
+
+        td {
+            background-color: grey;
+            font-family: "Yu Gothic";
+        }
+
+        .date {
+            color: blue;
+            font-size: 10px;
+            font-family: Calibri;
+            width: 10%;
+            border: 1px solid grey;
+            background-color: black;
+            max-width: 10%;
+        }
+
+        .id {
+            color: darkgreen;
+            font-size: 10px;
+            font-family: Calibri;
+            width: 10%;
+            border: 1px solid grey;
+            background-color: black;
+            max-width: 10%;
+        }
+
+        .name {
+            color: white;
+            width: 10%;
+            background-color: #1f1f1f;
+            max-width: 10%;
+            overflow: hidden;
+        }
+
+        .message {
+            color: white;
+            width: 70%;
+            border: 1px solid grey;
+            background-color: #2d2d2d;
+            max-width: 70%;
+            overflow: hidden;
+        }
+
+        #oversiktdate {
+            color: white;
+            font-size: 20px;
+            font-family: Calibri;
+            border: 1px solid grey;
+            background-color: black;
+            font-weight: normal;
+            line-height: 1.5;
+            width: 10%;
+            max-width: 10%;
+        }
+        #oversiktid {
+            color: white;
+            font-family: Calibri;
+            font-size: 20px;
+            background-color: black;
+            font-weight: normal;
+            line-height: 1.5;
+            width: 10%;
+            max-width: 10%;
+        }
+        #oversiktname {
+            color: white;
+            font-family: Calibri;
+            font-size: 20px;
+            background-color: #1f1f1f;
+            font-weight: normal;
+            line-height: 1.5;
+            width: 10%;
+            max-width: 10%;
+        }
+        #oversiktmessage {
+            color: white;
+            font-family: Calibri;
+            font-size: 20px;
+            background-color: #2d2d2d;
+            font-weight: normal;
+            line-height: 1.5;
+            width: 70%;
+            max-width: 70%;
+        }
+
+        #pDate {
+            color: white;
+        }
+
+        /*MAC - OPTIMIZED */
+        @media screen and (max-height: 703px) {
+
+            #servicechatbox {
+                width: 80%;
+                margin-left: 10%;
+                margin-top: 2%;
+                margin-right: 10%;
+            }
+
+            #messagefield {
+                overflow-x: hidden;
+                overflow-y: scroll;
+                max-height: 400px;
+            }
+
+            #submitbutton {
+                width: 100%;
+                background-color: darkgreen;
+            }
+
+            tr {
+                border: 1px solid grey;
+            }
+
+            td {
+                background-color: grey;
+                font-family: "Yu Gothic";
+            }
+
+            .date {
+                color: blue;
+                font-size: 10px;
+                font-family: Calibri;
+                width: 15%;
+                border: 1px solid grey;
+                background-color: black;
+                max-width: 10%;
+            }
+
+            .id {
+                color: darkgreen;
+                font-size: 10px;
+                font-family: Calibri;
+                width: 15%;
+                border: 1px solid grey;
+                background-color: black;
+                max-width: 10%;
+            }
+
+            .name {
+                color: white;
+                width: 15%;
+                background-color: #1f1f1f;
+                max-width: 10%;
+                overflow: hidden;
+            }
+
+            .message {
+                color: white;
+                width: 55%;
+                border: 1px solid grey;
+                background-color: #2d2d2d;
+                max-width: 70%;
+                overflow: hidden;
+            }
+
+            #oversiktdate {
+                color: white;
+                font-size: 20px;
+                font-family: Calibri;
+                border: 1px solid grey;
+                background-color: black;
+                font-weight: normal;
+                line-height: 1.5;
+                width: 15%;
+                max-width: 10%;
+            }
+            #oversiktid {
+                color: white;
+                font-family: Calibri;
+                font-size: 20px;
+                background-color: black;
+                font-weight: normal;
+                line-height: 1.5;
+                width: 15%;
+                max-width: 10%;
+            }
+            #oversiktname {
+                color: white;
+                font-family: Calibri;
+                font-size: 20px;
+                background-color: #1f1f1f;
+                font-weight: normal;
+                line-height: 1.5;
+                width: 15%;
+                max-width: 10%;
+            }
+            #oversiktmessage {
+                color: white;
+                font-family: Calibri;
+                font-size: 20px;
+                background-color: #2d2d2d;
+                font-weight: normal;
+                line-height: 1.5;
+                width: 55%;
+                max-width: 70%;
+            }
+            #oversiktstable {
+                margin-bottom: 0;
+                width: 100%;
+                overflow: hidden;
+                border-collapse:
+                        collapse;
+                table-layout: fixed;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+
+<!--NAV START-->
+<nav>
+    <div class="topnav" align="right">
+        <a id="home" class="droplet" href="#"><img style="margin-right: 10px; margin-top: 5px" src="img2/droplet%20logo%20png%20-%20uten%20transparency.png" height="60px"; width="60px">DROPLET</a>
+        <a id="foru" style="margin-right: 25px" href="#">Forum</a>
+        <a id="abou" style="margin-right: 25px" href="#">About</a>
+        <a id="logi" href="#">Login</a>
+        <a class="line">|</a>
+        <a id="registe" href="#">Register</a>
+    </div>
+
+</nav>
+<!--NAV END-->
+
+<!--links start-->
+<script>
+    document.getElementById("abou").onclick = function () {
+        location.href = "forum%20about.html";
+    };
+
+    document.getElementById("foru").onclick = function () {
+        location.href = "forum%20forum.html";
+    };
+
+    document.getElementById("registe").onclick = function () {
+        location.href = "forum%20register.html";
+    };
+
+    document.getElementById("logi").onclick = function () {
+        location.href = "forum%20login.html";
+    };
+
+    document.getElementById("home").onclick = function () {
+        location.href = "forum%20nightmode.html";
+    };
+</script>
+<!--links end-->
+
+
+<h1 id="theheader" align="center">Service Chat - (demo)</h1>
+
+
+
+
+<!--FORM-->
+<div id="servicechatbox">
+    <form id="regMessage">
+        <input type="text" id="inpSubmiter" required placeholder="Name...">
+        <input type="text" id="inpMessage" required placeholder="The problem you are experiencing">
+        <p id="pDate"></p>
+        <button onclick="document.getElementById('pDate').innerHTML = '<p>Submitted</p>'" id="submitbutton" type="submit" class="button">OK</button>
+    </form>
+
+
+
+
+    <!--MESSAGETABLEOVERSIKT-->
+    <table style="margin-bottom: 0; width: 98.9%; overflow: hidden; border-collapse: collapse; table-layout: fixed;">
+        <tr>
+            <td id="oversiktdate" class="date">DATE</td>
+            <td id="oversiktid" class="id">ID</td>
+            <td id="oversiktname" class="name">NAME</td>
+            <td id="oversiktmessage" class="message">PROBLEM</td>
+        </tr>
+    </table>
+
+
+    <!--MESSAGETABLE-->
+    <div id="messagefield">
+        <table style="table-layout: fixed;">
+            <tbody id="tblMessages"></tbody>
+        </table>
+    </div>
+
+
+
+    <!--FIREBASE LOGIN-->
+    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyBDQFfs3AsK0X0UcabaAYbqljU7gBtmJ2k",
+            authDomain: "droplet-service-chat.firebaseapp.com",
+            databaseURL: "https://droplet-service-chat.firebaseio.com",
+            projectId: "droplet-service-chat",
+            storageBucket: "droplet-service-chat.appspot.com",
+            messagingSenderId: "1076509662455"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+
+    <!--MAIN SCRIPT-->
+    <script>
+        var regMessage = document.getElementById("regMessage");
+        var inpSubmiter = document.getElementById("inpSubmiter");
+        var inpMessage = document.getElementById("inpMessage");
+        var tblMessages = document.getElementById("tblMessages");
+        var database = firebase.database();
+        var themessages = database.ref("themessages");
+        function storeMessage(evt) {
+            evt.preventDefault();
+            var themessage = {
+                submiter: inpSubmiter.value,
+                submited: inpMessage.value
+            };
+            themessages.push(themessage);
+            inpMessage.value = "";
+        }
+
+
+        function showMessages(snapshot){
+            var themessage = snapshot.val();
+            var key = snapshot.key;
+            tblMessages.innerHTML += `<tr>
+                                        <td style="color: blue" class="id">${Date()}</td>
+                                        <td class="id">${key}</td>
+                                        <td class="name">${themessage.submiter}</td>
+                                        <td class="message">${themessage.submited}</td>
+                                      </tr>`;
+        }
+        regMessage.addEventListener("submit", storeMessage);
+        themessages.on("child_added", showMessages);
+    </script>
+</div>
+
+
+
+</body>
+</html>

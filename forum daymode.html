@@ -1,0 +1,1459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>dropletforum</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            width: 100%;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .droplet {
+            font-size: 25px;
+            transition: 0.2s;
+            float: left;
+            margin-top: -20px;
+            transition-delay: 0.2s;
+        }
+
+        .droplet:hover {
+            font-size: 28px;
+            transition: 0.1s;
+        }
+
+        a:active {
+            text-underline: darkorange;
+            color: white;
+        }
+
+
+        a {
+            text-decoration: none;
+            color: #0f7699;
+            transition: 0.2s;
+
+        }
+        a:hover {
+            text-decoration: none;
+            color: white;
+            transition: 0.2s;
+        }
+        #sun:hover {
+            text-decoration: none;
+            color: darkorange;
+            transition: 0.2s;
+        }
+
+        nav {background-color: #092d39;
+            padding-bottom: 10px;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 40px;
+        }
+
+        .topnav {
+            margin-top: 0px;
+        }
+        .bottomnav {
+            font-size: 30px;
+        }
+        #moon:hover {
+            color: white;
+            transition: 0.2s;
+        }
+        .line:hover {
+            background-color: inherit;
+            color: white;
+        }
+        #sun {
+            font-size: 40px;
+        }
+
+        .prices {
+            background-image: url("img2/prices-01.png");
+            height: 250px;
+            width: 250px;
+            margin-left: 150px;
+            margin-top: 250px;
+            transition: 0.2s;
+            opacity: 0.9;
+            border-radius: 50px;
+            background-position: center;
+            transition-delay: 0.2s;
+
+        }
+
+        .news {
+            background-image: url("img2/news-01.png");
+            height: 250px;
+            width: 250px;
+            margin-left: 500px;
+            margin-top: -250px;
+            transition: 0.2s;
+            opacity: 0.9;
+            border-radius: 50px;
+            background-position: center;
+            transition-delay: 0.2s;
+        }
+
+        .coinswiki {
+            background-image: url("img2/coinwiki-01.png");
+            height: 250px;
+            width: 250px;
+            margin-left: 850px;
+            margin-top: -250px;
+            transition: 0.2s;
+            opacity: 0.9;
+            border-radius: 50px;
+            background-position: center;
+            transition-delay: 0.2s;
+        }
+
+        .prices:hover {
+            height: 300px;
+            width: 300px;
+            margin-left: 150px;
+            margin-top: 200px;
+            transition: 0.2s;
+            opacity: 1;
+            border-radius: 10px;
+            transition-delay: 0.2s;
+        }
+
+        .news:hover {
+            height: 300px;
+            width: 300px;
+            margin-left: 475px;
+            margin-top: -300px;
+            transition: 0.2s;
+            border-radius: 10px;
+            opacity: 1;
+            transition-delay: 0.2s;
+        }
+
+        .coinswiki:hover {
+            height: 300px;
+            width: 300px;
+            margin-left: 800px;
+            margin-top: -300px;
+            transition: 0.2s;
+            border-radius: 10px;
+            opacity: 1;
+            transition-delay: 0.2s;
+        }
+
+        /*      2560x1600 standard - MAC     */
+        @media screen and (max-height: 1600px) and (max-width: 2560px) {
+            .droplet {
+                font-size: 40px;
+                transition-delay: 0.2s;
+            }
+            .droplet:hover {
+                font-size: 50px;
+                color: white;
+                border: none;
+                background-color: inherit;
+            }
+
+            a {
+                font-size: 20px;
+                color: white;
+                padding-right: 5px;
+                padding-left: 5px;
+                transition: 0.5s;
+            }
+
+            a:hover {
+                border-radius: 500px;
+                background-color: white;
+                color: #092d39;
+                padding-right: 5px;
+                padding-left: 5px;
+                transition: 0.2s;
+            }
+
+            #moon:hover {
+                border: none;
+                background-color: inherit;
+                border-radius: 0px;
+            }
+
+            #sun:hover {
+                background-color: inherit;
+                border-radius: 0;
+            }
+
+            #moon {
+                font-size: 35px;
+                color: white;
+            }
+
+            nav {background-color: #092d39;
+                padding-bottom: 10px;
+                padding-left: 20px;
+                padding-right: 20px;
+                padding-top: 40px;
+            }
+            .topnav {
+                margin-top: 0px;
+            }
+            .bottomnav {
+                font-size: 30px;
+            }
+            #moon:hover {
+                color: white;
+                transition: 0.2s;
+            }
+            .line:hover {
+                background-color: inherit;
+                color: #0f7699;
+                color: white;
+            }
+            #sun {
+                font-size: 40px;
+                border-bottom: 3px solid darkorange;
+                color: darkorange;
+            }
+
+            .prices {
+                background-image: url("img2/prices-01.png");
+                height: 250px;
+                width: 250px;
+                margin-left: 10%;
+                margin-top: -400px;
+                transition: 0.2s;
+                opacity: 0.9;
+                border-radius: 50px;
+                background-position: center;
+                transition-delay: 0.2s;
+
+            }
+
+            .news {
+                background-image: url("img2/news-01.png");
+                height: 250px;
+                width: 250px;
+                margin-left: 38.5%;
+                margin-top: -400px;
+                transition: 0.2s;
+                opacity: 0.9;
+                border-radius: 50px;
+                background-position: center;
+                transition-delay: 0.2s;
+            }
+
+            .coinswiki {
+                background-image: url("img2/coinwiki-01.png");
+                height: 250px;
+                width: 250px;
+                margin-right: 10%;
+                float: right;
+                margin-top: -400px;
+                transition: 0.2s;
+                opacity: 0.9;
+                border-radius: 50px;
+                background-position: center;
+                transition-delay: 0.2s;
+            }
+
+            .prices:hover {
+                height: 300px;
+                width: 300px;
+                margin-left: 10%;
+                margin-top: -450px;
+                transition: 0.2s;
+                opacity: 1;
+                border-radius: 10px;
+                transition-delay: 0.2s;
+            }
+
+            .news:hover {
+                height: 300px;
+                width: 300px;
+                margin-left: 36.5%;
+                margin-top: -450px;
+                transition: 0.2s;
+                border-radius: 10px;
+                opacity: 1;
+                transition-delay: 0.2s;
+            }
+
+            .coinswiki:hover {
+                height: 300px;
+                width: 300px;
+                margin-right: 10%;
+                margin-top: -450px;
+                transition: 0.2s;
+                border-radius: 10px;
+                opacity: 1;
+                transition-delay: 0.2s;
+                float: right;
+            }
+
+            .toolsname {
+                font-size: 20px;
+                border: none;
+                background-color: #0f7699;
+                color: white;
+                float: right;
+                margin-right: 44%;
+                padding-right: 50px;
+                padding-left: 50px;
+                transition: 0.5s;
+                border-top-left-radius: 0px;
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 500px;
+                border-bottom-left-radius: 500px;
+            }
+
+            .toolsname:focus {
+                color: darkorange;
+                border-bottom: 4px solid darkorange;
+                padding-right: 200px;
+                padding-left: 200px;
+                transition: 0.2s;
+                margin-right: 32.3%;
+                border-top-left-radius: 0px;
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 500px;
+                border-bottom-left-radius: 500px;
+                background-color: white;
+            }
+
+            .toolsname:hover {
+                padding-right: 200px;
+                padding-left: 200px;
+                transition: 0.6s;
+                margin-right: 32.3%;
+                border-top-left-radius: 0px;
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 500px;
+                border-bottom-left-radius: 500px;
+                color: white;
+                background-color: #0f7699;
+            }
+
+            .videoContainer {
+                position: relative;
+                width: 100%;
+                height: 549px;
+            //padding: 20px;
+                background-attachment: scroll;
+                overflow: hidden;
+            }
+            .videoContainer video {
+                min-width: 100%;
+                min-height: 549px;
+                position: relative;
+                z-index: 1;
+            }
+            .videoContainer .overlay {
+                height: 549px;
+                width: 100%;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                z-index: 2;
+                background: white;
+                opacity: 0.6;
+            }
+
+            #mute:focus {
+                border-bottom: 4px solid white;
+                background-color: inherit;
+                border-radius: 0px;
+            }
+
+            #unmute:focus {
+                border-bottom: 4px solid white;
+                background-color: inherit;
+                border-radius: 0px;
+            }
+
+            #mute:hover {
+                background-color: inherit;
+                border-radius: 0px;
+            }
+
+            #unmute:hover {
+                background-color: inherit;
+                border-radius: 0px;
+            }
+        }
+
+        /*      2560x1440 standard - windows     */
+        @media only screen and  (min-height: 1309px){
+
+            .droplet {
+                font-size: 40px;
+                transition-delay: 0.2s;
+            }
+            .droplet:hover {
+                font-size: 50px;
+                color: white;
+                border: none;
+                background-color: inherit;
+            }
+
+            a {
+                font-size: 20px;
+                color: white;
+                padding-right: 5px;
+                padding-left: 5px;
+                transition: 0.5s;
+            }
+
+            a:hover {
+                border-radius: 500px;
+                background-color: white;
+                color: #092d39;
+                padding-right: 5px;
+                padding-left: 5px;
+                transition: 0.2s;
+            }
+
+            #moon:hover {
+                border: none;
+                background-color: inherit;
+            }
+
+            #sun:hover {
+                border: none;
+                background-color: inherit;
+                border-radius: 0px;
+                border-bottom: 3px solid darkorange;
+            }
+
+            #sun {
+                border-bottom: 3px solid darkorange;
+                color: darkorange;
+            }
+
+            #moon {
+                font-size: 35px;
+                color: white;
+            }
+
+            .prices {
+                background-image: url("img2/prices-01 500x500.png");
+                height: 400px;
+                width: 400px;
+                margin-left: 15%;
+                margin-top: -800px;
+                transition: 0.2s;
+                opacity: 0.7;
+                border-radius: 50px;
+                background-position: center;
+                transition-delay: 0.2s;
+            }
+
+            .news {
+                background-image: url("img2/news-01 500x500.png");
+                height: 400px;
+                width: 400px;
+                margin-left: 42.5%;
+                margin-top: -800px;
+                transition: 0.2s;
+                opacity: 0.7;
+                border-radius: 50px;
+                background-position: center;
+                transition-delay: 0.2s;
+            }
+
+            .coinswiki {
+                background-image: url("img2/coinwiki-01 500x500.png");
+                height: 400px;
+                width: 400px;
+                margin-left: 69%;
+                margin-top: -800px;
+                transition: 0.2s;
+                opacity: 0.7;
+                border-radius: 50px;
+                background-position: center;
+                transition-delay: 0.2s;
+            }
+
+            .prices:hover {
+                height: 500px;
+                width: 500px;
+                margin-left: 15%;
+                margin-top: -900px;
+                transition: 0.2s;
+                opacity: 1;
+                border-radius: 10px;
+                transition-delay: 0.2s;
+                cursor: pointer;
+            }
+
+            .news:hover {
+                height: 500px;
+                width: 500px;
+                margin-left: 40.5%;
+                margin-top: -900px;
+                transition: 0.2s;
+                border-radius: 10px;
+                opacity: 1;
+                transition-delay: 0.2s;
+                cursor: pointer;
+            }
+
+            .coinswiki:hover {
+                height: 500px;
+                width: 500px;
+                margin-left: 65.1%;
+                margin-top: -900px;
+                transition: 0.2s;
+                border-radius: 10px;
+                opacity: 1;
+                transition-delay: 0.2s;
+                cursor: pointer;
+            }
+
+            .toolsname {
+                font-size: 20px;
+                border: none;
+                background-color: #0f7699;
+                color: white;
+                float: right;
+                margin-right: 48%;
+                padding-right: 50px;
+                padding-left: 50px;
+                transition: 0.5s;
+                border-top-left-radius: 0px;
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 500px;
+                border-bottom-left-radius: 500px;
+            }
+
+            .toolsname:focus {
+                color: #0f7699;
+                border-bottom: none;
+                padding-right: 200px;
+                padding-left: 200px;
+                margin-right: 42.15%;
+                border-top-left-radius: 0px;
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 500px;
+                border-bottom-left-radius: 500px;
+                background-color: #0f7699;
+            }
+
+            .toolsname:hover {
+                padding-right: 200px;
+                padding-left: 200px;
+                transition: 0.6s;
+                margin-right: 42.15%;
+                border-top-left-radius: 0px;
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 500px;
+                border-bottom-left-radius: 500px;
+                cursor: pointer;
+                background-color: #0f7699;
+            }
+
+            .videoContainer {
+                position: relative;
+                width: 100%;
+                height: 1155px;
+            //padding: 20px;
+                background-attachment: scroll;
+                overflow: hidden;
+            }
+            .videoContainer video {
+                min-width: 100%;
+                min-height: 1155px;
+                position: relative;
+                z-index: 1;
+            }
+            .videoContainer .overlay {
+                height: 1155px;
+                width: 100%;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                z-index: 2;
+                background: white;
+                opacity: 0.6;
+            }
+
+            #mute:focus {
+                border-bottom: 4px solid white;
+                background-color: inherit;
+                border-radius: 0px;
+            }
+
+            #unmute:focus {
+                border-bottom: 4px solid white;
+                background-color: inherit;
+                border-radius: 0px;
+            }
+
+            #mute:hover {
+                background-color: inherit;
+                border-radius: 0px;
+            }
+
+            #unmute:hover {
+                background-color: inherit;
+                border-radius: 0px;
+            }
+            #main {
+                transition: margin-top .5s;
+            }
+
+            .dropnav {
+                height: 0;
+                width: 100%;
+                position: fixed;
+                z-index: 1;
+                top: 0;
+                background-color: #0f7699;
+                overflow-x: hidden;
+                overflow-y: hidden;
+                transition: 0.5s;
+
+            }
+
+            .dropnav a {
+                padding: 8px 8px 8px 32px;
+                text-decoration: none;
+                font-size: 25px;
+                color: white;
+                display: block;
+                transition: 0.3s;
+                background-color: inherit;
+            }
+
+
+            .dropnav a:hover {
+                background-color: inherit;
+            }
+
+            .closebtn {
+                font-size: 20px;
+                color: white;
+                background-color: #092d39;
+                float: right;
+                margin-right: 42.15%;
+                padding-right: 200px;
+                padding-left: 200px;
+                border-top-left-radius: 0px;
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 500px;
+                border-bottom-left-radius: 500px;
+            }
+
+            .closebtn:hover {
+                color: white;
+                background-color: #092d39;
+                border-bottom: 4px solid white;
+                margin-right: 42.15%;
+                cursor: pointer;
+                transition: 0.5s;
+
+
+            }
+        }
+
+        .pricebanner {
+            position: relative;
+            -webkit-animation-name: pricebanneret;
+            -webkit-animation-duration: 30s;
+            animation-name: pricebanneret;
+            animation-duration: 30s;
+            z-index: 10;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            z-index: 100;
+        }
+
+        .pricebanner2 {
+            position: relative;
+            -webkit-animation-name: pricebanneret2;
+            -webkit-animation-duration: 30s;
+            animation-name: pricebanneret2;
+            animation-duration: 30s;
+            z-index: 10;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            margin-top: -61px;
+            z-index: 100;
+        }
+
+        @-webkit-keyframes pricebanneret {
+            0%   {left: 0;}
+            50%   {left: 2560px;}
+            50.01%   {left: -2560px;}
+            100% {left:0;}
+        }
+
+        @keyframes pricebanneret {
+            0%   {left: 0;}
+            50%   {left: 2560px;}
+            50.01%   {left: -2560px;}
+            100% {left:0;}
+        }
+
+        @-webkit-keyframes pricebanneret2 {
+            0%   {left:-2560px;}
+            100% {left:2560px;}
+        }
+
+        @keyframes pricebanneret2 {
+            0%   {left:-2560px;}
+            100% {left:2560px;}
+        }
+
+        .bgpricebanner {
+            background-color: black;
+            width: 2560px;
+            overflow: hidden;
+        }
+
+
+
+        /*      2560x1440 standard - windows     */
+        @media only screen and  (min-height: 1309px){
+            @-webkit-keyframes pricebanneret {
+                0%   {left: 0;}
+                50%   {left: 2560px;}
+                50.01%   {left: -2560px;}
+                100% {left:0;}
+            }
+
+            @keyframes pricebanneret {
+                0%   {left: 0;}
+                50%   {left: 2560px;}
+                50.01%   {left: -2560px;}
+                100% {left:0;}
+            }
+
+            @-webkit-keyframes pricebanneret2 {
+                0%   {left:-2560px;}
+                100% {left:2560px;}
+            }
+
+            @keyframes pricebanneret2 {
+                0%   {left:-2560px;}
+                100% {left:2560px;}
+            }
+
+            .bgpricebanner {
+                background-color: black;
+                width: 2560px;
+                overflow: hidden;
+            }
+        }
+
+        /*      2560x1600 standard - MAC     */
+        @media screen and (min-height: 1600px){
+
+            @-webkit-keyframes pricebanneret {
+                0%   {left: 0;}
+                50%   {left: 2560px;}
+                50.01%   {left: -2560px;}
+                100% {left:0;}
+            }
+
+            @keyframes pricebanneret {
+                0%   {left: 0;}
+                50%   {left: 2560px;}
+                50.01%   {left: -2560px;}
+                100% {left:0;}
+            }
+
+            @-webkit-keyframes pricebanneret2 {
+                0%   {left:-2560px;}
+                100% {left:2560px;}
+            }
+
+            @keyframes pricebanneret2 {
+                0%   {left:-2560px;}
+                100% {left:2560px;}
+            }
+
+            .bgpricebanner {
+                background-color: black;
+                width: 2560px;
+                overflow: hidden;
+            }
+        }
+
+
+        table {
+            display: inline;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .theimg img {
+            width: 50px;
+            height: 50px;
+            padding-right: 150px;
+        }
+
+        table {
+            border: 1px solid black;
+            margin-right: 140px;
+        }
+
+        td {
+            color: white;
+            font-size: 20px;
+        }
+
+        th img {
+            height: 50px;
+            width: 50px;
+            font-size: 20px;
+            color: white;
+        }
+
+        th {
+            color: white;
+            font-size: 20px;
+        }
+
+
+        #servicechat {
+            border-radius: 500px;
+            background-color: #092d39;
+            float: left;
+            margin-top: 10px;
+            margin-left: 10px;
+            transition: 0.3s;
+            color: white;
+        }
+
+
+        #servicechat:hover {
+            border-radius: 500px;
+            background-color: #094b58;
+            margin-top: 10px;
+            margin-left: 10px;
+            transition: 0.3s;
+            font-size: 30px;
+            color: white;
+        }
+        #tradingtool {
+            border-radius: 500px;
+            background-color: #092d39;
+            float: left;
+            margin-top: 10px;
+            margin-left: 10px;
+            transition: 0.3s;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+
+<div id="myDropnav" class="dropnav">
+    <div style="height: 61px" class="bgpricebanner">
+        <div class="pricebanner">
+
+            <table>
+                <tr id="zencash"></tr>
+            </table>
+            <table>
+                <tr id="bitcoin"></tr>
+            </table>
+            <table>
+                <tr id="dash"></tr>
+            </table>
+            <table>
+                <tr id="cardano"></tr>
+            </table>
+            <table>
+                <tr id="litecoin"></tr>
+            </table>
+            <table>
+                <tr id="monero"></tr>
+            </table>
+            <table>
+                <tr id="ripple"></tr>
+            </table>
+
+        </div>
+
+
+
+
+        <div class="pricebanner2">
+
+            <table>
+                <tr id="stellar"></tr>
+            </table>
+            <table>
+                <tr id="nem"></tr>
+            </table>
+            <table>
+                <tr id="nano"></tr>
+            </table>
+            <table>
+                <tr id="bitshares"></tr>
+            </table>
+            <table>
+                <tr id="ark"></tr>
+            </table>
+            <table>
+                <tr id="ubiq"></tr>
+            </table>
+            <table>
+                <tr id="neo"></tr>
+            </table>
+
+        </div>
+    </div>
+    <span href="#" class="closebtn" onclick="closeNav()">Close</span>
+    <div id="thetools">
+        <a id="servicechat" href="forum%20droplet%20serivce%20chat%20demo.html">Service chat - (demo)</a>
+        <a id="tradingtool" href="#">Trading Tool - (coming soon)</a>
+    </div>
+</div>
+
+<div id="main">
+    <!--CAN BE USED FOR HAMBURGER BAR " &#9776; " -->
+
+    <div class="myNav"></div>
+    <a onclick="openNav()" href="#" class="toolsname">Tools</a>
+
+<!--NAV START-->
+<nav>
+    <div class="topnav" align="right">
+        <a id="home" class="droplet" href="#"><img style="margin-right: 10px; margin-top: 5px" src="img2/droplet%20logo%20png%20-%20uten%20transparency.png" height="60px"; width="60px">DROPLET</a>
+        <a id="foru" style="margin-right: 25px" href="#">Forum</a>
+        <a id="abou" style="margin-right: 25px" href="#">About</a>
+        <a id="logi" href="#">Login</a>
+        <a class="line">|</a>
+        <a id="registe" href="#">Register</a>
+    </div>
+
+    <div class="midnav" align="right">
+        <a onclick="night()" id="moon" href="forum%20nightmode.html">☽</a>
+        <a class="line">|</a>
+        <a onclick="day()" id="sun" href="forum daymode.html">☼</a>
+    </div>
+
+    <div class="bottomnav" align="right">
+        <a id="mute" onclick="enableMute()" href="#"><img height="25px" src="img2/mute-01.png"></a>
+        <a class="line">|</a>
+        <a id="unmute" onclick="disableMute()" href="#"><img height="25px" src="img2/unmute-01.png"></a>
+    </div>
+</nav>
+<!--NAV END-->
+
+
+
+
+
+
+<!--Video and pads START-->
+<div class="videoContainer">
+    <div class="overlay"></div>
+    <video id="myVideo" autoplay loop>
+        <source src="img2/Timelapse%20Stock%20Footage%202016%20(youtubemp4.to).mp4" type="video/mp4">
+    </video>
+
+    <!--mute&unmute script-->
+    <script>
+        let vid = document.getElementById("myVideo");
+
+        function enableMute() {
+            vid.muted = true;
+        }
+
+        function disableMute() {
+            vid.muted = false;
+        }
+
+        function checkMute() {
+            alert(vid.muted);
+        }
+    </script>
+
+</div>
+<div class="#">
+    <div style="z-index: 1000; position: absolute;" id="price" class="prices"></div>
+    <div style="z-index: 1000; position: absolute;" id="new" class="news"></div>
+    <div style="z-index: 1000; position: absolute;" id="coinwiki" class="coinswiki"></div>
+</div>
+<!--Video and pads END-->
+
+
+
+
+
+
+<!--links start-->
+<script>document.getElementById("price").onclick = function () {
+    location.href = "forum%20prices.html";
+};
+
+document.getElementById("new").onclick = function () {
+    location.href = "forum%20news.html";
+};
+
+document.getElementById("coinwiki").onclick = function () {
+    location.href = "forum%20coinswiki.html";
+};
+
+document.getElementById("abou").onclick = function () {
+    location.href = "forum%20about.html";
+};
+
+document.getElementById("foru").onclick = function () {
+    location.href = "forum%20forum.html";
+};
+
+document.getElementById("registe").onclick = function () {
+    location.href = "forum%20register.html";
+};
+
+document.getElementById("logi").onclick = function () {
+    location.href = "forum%20login.html";
+};
+
+document.getElementById("home").onclick = function () {
+    location.href = "http://dropletcoin.com/";
+};
+</script>
+<!--links end-->
+
+
+
+    <!--DROPDOWN NAV START-->
+    <script>
+        function openNav() {
+            document.getElementById("myDropnav").style.width = "100%";
+            document.getElementById("myDropnav").style.height = "250px";
+            document.getElementById("main").style.marginTop = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("myDropnav").style.width = "100%";
+            document.getElementById("myDropnav").style.height = "0";
+            document.getElementById("main").style.marginTop= "0";
+        }
+    </script>
+    <!--DROPDOWN NAV END-->
+
+
+
+
+
+
+
+
+    <!--SCRIPT FOR PRICES-->
+
+
+
+
+    <!--ZENCASH SCRIPT-->
+    <script>
+        var json = new XMLHttpRequest(); // start a new variable to store the JSON in
+        json.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) { // if HTTP header 200 - ok
+                var object = JSON.parse(this.responseText); // set the variable 'object' to whatever we get back, in our case it is an array of 10 different arrays
+
+                object.forEach(function(currency) { // for each of those arrays, split it into chunks called 'currency'
+                    document.getElementById("zencash").innerHTML =`
+                <th class="tableimg"><img height="50px" width="50px" src="img2/zencash.png"> </th>
+                <td>$${currency.price_usd}</td>
+                <td> </td>
+                <td style="color: green">${currency.percent_change_24h}%</td>
+            `
+                });
+            }
+        };
+        json.open(
+            "GET", // method
+            "https://api.coinmarketcap.com/v1/ticker/zencash/", // url
+            true // async
+        ); // initialise the request
+        json.send(); //send request
+
+    </script>
+
+    <!--BITCOIN SCRIPT-->
+    <script>
+        var json = new XMLHttpRequest(); // start a new variable to store the JSON in
+        json.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) { // if HTTP header 200 - ok
+                var object = JSON.parse(this.responseText); // set the variable 'object' to whatever we get back, in our case it is an array of 10 different arrays
+
+                object.forEach(function(currency) { // for each of those arrays, split it into chunks called 'currency'
+                    document.getElementById("bitcoin").innerHTML =`
+                <th class="tableimg"><img height="50px" width="50px" src="img2/btc.png"> </th>
+                <td>$${currency.price_usd}</td>
+                <td> </td>
+                <td style="color: green">${currency.percent_change_24h}%</td>
+            `
+                });
+            }
+        };
+        json.open(
+            "GET", // method
+            "https://api.coinmarketcap.com/v1/ticker/bitcoin/", // url
+            true // async
+        ); // initialise the request
+        json.send(); //send request
+
+    </script>
+
+    <!--DASH SCRIPT-->
+    <script>
+        var json = new XMLHttpRequest(); // start a new variable to store the JSON in
+        json.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) { // if HTTP header 200 - ok
+                var object = JSON.parse(this.responseText); // set the variable 'object' to whatever we get back, in our case it is an array of 10 different arrays
+
+                object.forEach(function(currency) { // for each of those arrays, split it into chunks called 'currency'
+                    document.getElementById("dash").innerHTML =`
+                <th class="tableimg"><img height="50px" width="50px" src="img2/Dash.png"> </th>
+                <td>$${currency.price_usd}</td>
+                <td> </td>
+                <td style="color: green">${currency.percent_change_24h}%</td>
+            `
+                });
+            }
+        };
+        json.open(
+            "GET", // method
+            "https://api.coinmarketcap.com/v1/ticker/dash/", // url
+            true // async
+        ); // initialise the request
+        json.send(); //send request
+
+    </script>
+
+
+    <!--LITECOIN SCRIPT-->
+    <script>
+        var json = new XMLHttpRequest(); // start a new variable to store the JSON in
+        json.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) { // if HTTP header 200 - ok
+                var object = JSON.parse(this.responseText); // set the variable 'object' to whatever we get back, in our case it is an array of 10 different arrays
+
+                object.forEach(function(currency) { // for each of those arrays, split it into chunks called 'currency'
+                    document.getElementById("litecoin").innerHTML =`
+                <th class="tableimg"><img height="50px" width="50px" src="img2/litecoin.png"> </th>
+                <td>$${currency.price_usd}</td>
+                <td> </td>
+                <td style="color: green">${currency.percent_change_24h}%</td>
+            `
+                });
+            }
+        };
+        json.open(
+            "GET", // method
+            "https://api.coinmarketcap.com/v1/ticker/litecoin/", // url
+            true // async
+        ); // initialise the request
+        json.send(); //send request
+
+    </script>
+
+
+    <!--CARDANO SCRIPT-->
+    <script>
+        var json = new XMLHttpRequest(); // start a new variable to store the JSON in
+        json.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) { // if HTTP header 200 - ok
+                var object = JSON.parse(this.responseText); // set the variable 'object' to whatever we get back, in our case it is an array of 10 different arrays
+
+                object.forEach(function(currency) { // for each of those arrays, split it into chunks called 'currency'
+                    document.getElementById("cardano").innerHTML =`
+                <th class="tableimg"><img height="50px" width="50px" src="img2/cardano.png"> </th>
+                <td>$${currency.price_usd}</td>
+                <td> </td>
+                <td style="color: green">${currency.percent_change_24h}%</td>
+            `
+                });
+            }
+        };
+        json.open(
+            "GET", // method
+            "https://api.coinmarketcap.com/v1/ticker/cardano/", // url
+            true // async
+        ); // initialise the request
+        json.send(); //send request
+
+    </script>
+
+
+
+    <!--STELLAR SCRIPT-->
+    <script>
+        var json = new XMLHttpRequest(); // start a new variable to store the JSON in
+        json.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) { // if HTTP header 200 - ok
+                var object = JSON.parse(this.responseText); // set the variable 'object' to whatever we get back, in our case it is an array of 10 different arrays
+
+                object.forEach(function(currency) { // for each of those arrays, split it into chunks called 'currency'
+                    document.getElementById("stellar").innerHTML =`
+                <th class="tableimg"><img height="50px" width="50px" src="img2/stellar.png"> </th>
+                <td>$${currency.price_usd}</td>
+                <td> </td>
+                <td style="color: green">${currency.percent_change_24h}%</td>
+            `
+                });
+            }
+        };
+        json.open(
+            "GET", // method
+            "https://api.coinmarketcap.com/v1/ticker/stellar/", // url
+            true // async
+        ); // initialise the request
+        json.send(); //send request
+
+    </script>
+
+
+
+    <!--MONERO SCRIPT-->
+    <script>
+        var json = new XMLHttpRequest(); // start a new variable to store the JSON in
+        json.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) { // if HTTP header 200 - ok
+                var object = JSON.parse(this.responseText); // set the variable 'object' to whatever we get back, in our case it is an array of 10 different arrays
+
+                object.forEach(function(currency) { // for each of those arrays, split it into chunks called 'currency'
+                    document.getElementById("monero").innerHTML =`
+                <th class="tableimg"><img height="50px" width="50px" src="img2/monero.png"> </th>
+                <td>$${currency.price_usd}</td>
+                <td> </td>
+                <td style="color: green">${currency.percent_change_24h}%</td>
+            `
+                });
+            }
+        };
+        json.open(
+            "GET", // method
+            "https://api.coinmarketcap.com/v1/ticker/monero/", // url
+            true // async
+        ); // initialise the request
+        json.send(); //send request
+
+    </script>
+
+
+
+    <!--ARK SCRIPT-->
+    <script>
+        var json = new XMLHttpRequest(); // start a new variable to store the JSON in
+        json.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) { // if HTTP header 200 - ok
+                var object = JSON.parse(this.responseText); // set the variable 'object' to whatever we get back, in our case it is an array of 10 different arrays
+
+                object.forEach(function(currency) { // for each of those arrays, split it into chunks called 'currency'
+                    document.getElementById("ark").innerHTML =`
+                <th class="tableimg"><img height="50px" width="50px" src="img2/ark.png"> </th>
+                <td>$${currency.price_usd}</td>
+                <td> </td>
+                <td style="color: green">${currency.percent_change_24h}%</td>
+            `
+                });
+            }
+        };
+        json.open(
+            "GET", // method
+            "https://api.coinmarketcap.com/v1/ticker/ark/", // url
+            true // async
+        ); // initialise the request
+        json.send(); //send request
+
+    </script>
+
+
+
+    <!--NANO SCRIPT-->
+    <script>
+        var json = new XMLHttpRequest(); // start a new variable to store the JSON in
+        json.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) { // if HTTP header 200 - ok
+                var object = JSON.parse(this.responseText); // set the variable 'object' to whatever we get back, in our case it is an array of 10 different arrays
+
+                object.forEach(function(currency) { // for each of those arrays, split it into chunks called 'currency'
+                    document.getElementById("nano").innerHTML =`
+                <th class="tableimg"><img height="50px" width="50px" src="img2/nano.png"> </th>
+                <td>$${currency.price_usd}</td>
+                <td> </td>
+                <td style="color: green">${currency.percent_change_24h}%</td>
+            `
+                });
+            }
+        };
+        json.open(
+            "GET", // method
+            "https://api.coinmarketcap.com/v1/ticker/nano/", // url
+            true // async
+        ); // initialise the request
+        json.send(); //send request
+
+    </script>
+
+
+
+
+    <!--NEO SCRIPT-->
+    <script>
+        var json = new XMLHttpRequest(); // start a new variable to store the JSON in
+        json.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) { // if HTTP header 200 - ok
+                var object = JSON.parse(this.responseText); // set the variable 'object' to whatever we get back, in our case it is an array of 10 different arrays
+
+                object.forEach(function(currency) { // for each of those arrays, split it into chunks called 'currency'
+                    document.getElementById("neo").innerHTML =`
+                <th class="tableimg"><img height="50px" width="50px" src="img2/neo.png"> </th>
+                <td>$${currency.price_usd}</td>
+                <td> </td>
+                <td style="color: green">${currency.percent_change_24h}%</td>
+            `
+                });
+            }
+        };
+        json.open(
+            "GET", // method
+            "https://api.coinmarketcap.com/v1/ticker/neo/", // url
+            true // async
+        ); // initialise the request
+        json.send(); //send request
+
+    </script>
+
+
+
+
+    <!--UBIQ SCRIPT-->
+    <script>
+        var json = new XMLHttpRequest(); // start a new variable to store the JSON in
+        json.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) { // if HTTP header 200 - ok
+                var object = JSON.parse(this.responseText); // set the variable 'object' to whatever we get back, in our case it is an array of 10 different arrays
+
+                object.forEach(function(currency) { // for each of those arrays, split it into chunks called 'currency'
+                    document.getElementById("ubiq").innerHTML =`
+                <th class="tableimg"><img height="50px" width="50px" src="img2/ubiq.png"> </th>
+                <td>$${currency.price_usd}</td>
+                <td> </td>
+                <td style="color: green">${currency.percent_change_24h}%</td>
+            `
+                });
+            }
+        };
+        json.open(
+            "GET", // method
+            "https://api.coinmarketcap.com/v1/ticker/ubiq/", // url
+            true // async
+        ); // initialise the request
+        json.send(); //send request
+
+    </script>
+
+
+
+
+    <!--NEM SCRIPT-->
+    <script>
+        var json = new XMLHttpRequest(); // start a new variable to store the JSON in
+        json.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) { // if HTTP header 200 - ok
+                var object = JSON.parse(this.responseText); // set the variable 'object' to whatever we get back, in our case it is an array of 10 different arrays
+
+                object.forEach(function(currency) { // for each of those arrays, split it into chunks called 'currency'
+                    document.getElementById("nem").innerHTML =`
+                <th class="tableimg"><img height="50px" width="50px" src="img2/nem.png"> </th>
+                <td>$${currency.price_usd}</td>
+                <td> </td>
+                <td style="color: green">${currency.percent_change_24h}%</td>
+            `
+                });
+            }
+        };
+        json.open(
+            "GET", // method
+            "https://api.coinmarketcap.com/v1/ticker/nem/", // url
+            true // async
+        ); // initialise the request
+        json.send(); //send request
+
+    </script>
+
+
+
+
+    <!--BITSHARES SCRIPT-->
+    <script>
+        var json = new XMLHttpRequest(); // start a new variable to store the JSON in
+        json.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) { // if HTTP header 200 - ok
+                var object = JSON.parse(this.responseText); // set the variable 'object' to whatever we get back, in our case it is an array of 10 different arrays
+
+                object.forEach(function(currency) { // for each of those arrays, split it into chunks called 'currency'
+                    document.getElementById("bitshares").innerHTML =`
+                <th class="tableimg"><img height="50px" width="50px" src="img2/bitshares.png"> </th>
+                <td>$${currency.price_usd}</td>
+                <td> </td>
+                <td style="color: green">${currency.percent_change_24h}%</td>
+            `
+                });
+            }
+        };
+        json.open(
+            "GET", // method
+            "https://api.coinmarketcap.com/v1/ticker/bitshares/", // url
+            true // async
+        ); // initialise the request
+        json.send(); //send request
+
+    </script>
+
+
+    <!--RIPPLE SCRIPT-->
+    <script>
+        var json = new XMLHttpRequest(); // start a new variable to store the JSON in
+        json.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) { // if HTTP header 200 - ok
+                var object = JSON.parse(this.responseText); // set the variable 'object' to whatever we get back, in our case it is an array of 10 different arrays
+
+                object.forEach(function(currency) { // for each of those arrays, split it into chunks called 'currency'
+                    document.getElementById("ripple").innerHTML =`
+                <th class="tableimg"><img height="50px" width="50px" src="img2/ripple.png"> </th>
+                <td>$${currency.price_usd}</td>
+                <td> </td>
+                <td style="color: green">${currency.percent_change_24h}%</td>
+            `
+                });
+            }
+        };
+        json.open(
+            "GET", // method
+            "https://api.coinmarketcap.com/v1/ticker/ripple/", // url
+            true // async
+        ); // initialise the request
+        json.send(); //send request
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</body>
+</html>
