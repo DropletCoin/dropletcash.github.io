@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>dropletforum</title>
     <style>
+
         body {
             font-family: sans-serif;
             width: 100%;
@@ -46,6 +47,7 @@
             text-decoration: none;
             color: darkorange;
             transition: 0.2s;
+            border-bottom: 2px solid darkorange;
         }
 
         nav {background-color: #092d39;
@@ -54,7 +56,9 @@
             padding-right: 20px;
             padding-top: 40px;
         }
-
+        .bg{
+            height: 350px;
+        }
         .topnav {
             margin-top: 0px;
         }
@@ -146,6 +150,15 @@
             transition-delay: 0.2s;
         }
 
+
+
+
+
+
+
+
+
+
         /*      2560x1600 standard - MAC     */
         @media screen and (max-height: 1600px) and (max-width: 2560px) {
             .droplet {
@@ -170,16 +183,36 @@
             a:hover {
                 border-radius: 500px;
                 background-color: white;
-                color: #092d39;
                 padding-right: 5px;
                 padding-left: 5px;
                 transition: 0.2s;
             }
 
+            #abou:hover {
+                color: #092d39;
+            }
+
+            #foru:hover {
+                color: #092d39;
+            }
+
+            #logi:hover {
+                color: #092d39;
+            }
+
+            #registe:hover {
+                color: #092d39;
+            }
+
+            .topnav .line:hover {
+                color: white;
+            }
+
             #moon:hover {
                 border: none;
                 background-color: inherit;
-                border-radius: 0px;
+                border-bottom: none;
+                border-radius: 0;
             }
 
             #sun:hover {
@@ -190,6 +223,7 @@
             #moon {
                 font-size: 35px;
                 color: white;
+                border-bottom: none;
             }
 
             nav {background-color: #092d39;
@@ -197,6 +231,10 @@
                 padding-left: 20px;
                 padding-right: 20px;
                 padding-top: 40px;
+            }
+            .bg{
+                background-color: white;
+                height: 350px;
             }
             .topnav {
                 margin-top: 0px;
@@ -215,8 +253,8 @@
             }
             #sun {
                 font-size: 40px;
-                border-bottom: 3px solid darkorange;
                 color: darkorange;
+                border-bottom: 2px solid darkorange;
             }
 
             .prices {
@@ -269,6 +307,7 @@
                 opacity: 1;
                 border-radius: 10px;
                 transition-delay: 0.2s;
+                cursor: pointer;
             }
 
             .news:hover {
@@ -280,6 +319,7 @@
                 border-radius: 10px;
                 opacity: 1;
                 transition-delay: 0.2s;
+                cursor: pointer;
             }
 
             .coinswiki:hover {
@@ -292,6 +332,19 @@
                 opacity: 1;
                 transition-delay: 0.2s;
                 float: right;
+                cursor: pointer;
+            }
+
+
+            .topbtn {
+                color: #0f7699;
+                float: top;
+                width: 100%;
+            }
+
+            .topbtn:focus {
+                height: 400px;
+                width: 100%;
             }
 
             .toolsname {
@@ -311,8 +364,8 @@
             }
 
             .toolsname:focus {
-                color: darkorange;
-                border-bottom: 4px solid darkorange;
+                color: #0f7699;
+                border-bottom: none;
                 padding-right: 200px;
                 padding-left: 200px;
                 transition: 0.2s;
@@ -321,7 +374,7 @@
                 border-top-right-radius: 0px;
                 border-bottom-right-radius: 500px;
                 border-bottom-left-radius: 500px;
-                background-color: white;
+                background-color: #0f7699;
             }
 
             .toolsname:hover {
@@ -333,7 +386,6 @@
                 border-top-right-radius: 0px;
                 border-bottom-right-radius: 500px;
                 border-bottom-left-radius: 500px;
-                color: white;
                 background-color: #0f7699;
             }
 
@@ -382,6 +434,92 @@
             #unmute:hover {
                 background-color: inherit;
                 border-radius: 0px;
+            }
+
+            #main {
+                transition: margin-top .5s;
+            }
+
+            .dropnav {
+                height: 0;
+                width: 100%;
+                position: fixed;
+                z-index: 1;
+                top: 0;
+                background-color: #0f7699;
+                overflow-x: hidden;
+                overflow-y: hidden;
+                transition: 0.5s;
+
+            }
+
+            .dropnav a {
+                padding: 8px 8px 8px 32px;
+                text-decoration: none;
+                font-size: 25px;
+                color: white;
+                display: block;
+                transition: 0.3s;
+                background-color: inherit;
+            }
+
+
+            .dropnav a:hover {
+                background-color: inherit;
+            }
+
+            .closebtn {
+                font-size: 20px;
+                color: white;
+                background-color: #092d39;
+                float: right;
+                margin-right: 32.3%;
+                padding-right: 200px;
+                padding-left: 200px;
+                border-top-left-radius: 0px;
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 500px;
+                border-bottom-left-radius: 500px;
+            }
+
+            .closebtn:hover {
+                color: white;
+                background-color: #092d39;
+                border-bottom: 4px solid white;
+                margin-right: 32.3%;
+                cursor: pointer;
+                transition: 0.5s;
+            }
+
+            #servicechat {
+                border-radius: 500px;
+                background-color: #092d39;
+                float: left;
+                margin-top: 5px;
+                margin-left: 5px;
+                transition: 0.3s;
+                color: white;
+            }
+
+
+            #servicechat:hover {
+                border-radius: 500px;
+                background-color: #094b58;
+                margin-top: 5px;
+                margin-left: 5px;
+                transition: 0.3s;
+                font-size: 20px;
+                color: white;
+            }
+
+            #tradingtool {
+                border-radius: 500px;
+                background-color: #092d39;
+                float: left;
+                margin-top: 5px;
+                margin-left: 5px;
+                transition: 0.3s;
+                color: white;
             }
         }
 
@@ -553,6 +691,11 @@
                 border-bottom-left-radius: 500px;
                 cursor: pointer;
                 background-color: #0f7699;
+                color: white;
+            }
+
+            .toolsname.toolsname:hover {
+                color: #0f7699;
             }
 
             .videoContainer {
@@ -749,8 +892,8 @@
             }
         }
 
-        /*      2560x1600 standard - MAC     */
-        @media screen and (min-height: 1600px){
+        /*      1600 standard - MAC     */
+        @media screen and (max-height: 703px){
 
             @-webkit-keyframes pricebanneret {
                 0%   {left: 0;}
